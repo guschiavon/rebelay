@@ -1,23 +1,18 @@
 general:
-  site_url: 
+  site_url: 'https://rebelay.com'
   address:
-  email:
-  phone:
+  email: 
+  phone: 
   social:
-    - channel: "Facebook"
-      add_to_chat_bubble: false
-      url: 'https://facebook.com'
-    - channel: "WhatsApp"
-      add_to_chat_bubble: true
-      url: 'https://facebook.com'
-    - channel: "Messenger"
-      add_to_chat_bubble: true
-      url: 'https://facebook.com'
+    - channel: "Facebook"      
+      url: 'https://facebook.com/rebelay.canyoning'    
+    - channel: "Instagram"      
+      url: 'https://instagram.com/rebelay.canyoning'
 branding:
   site_title: 'Re:belay Canyoning'
   nav_logo_image: /assets/images/rebelay-logo-with-tagline-light-full-width.png
-  footer_logo_image:
-  preview_image:
+  footer_logo_image: /assets/images/rebelay-icon-dark.png
+  preview_image: /assets/images/rebelay-logo-with-tagline-light-full-width.png
 navigation:
   menus:
     - name: About
@@ -57,6 +52,7 @@ seo:
   keywords:
 configuration:
   head_code_block: >-
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet preload" onload="this.rel = 'stylesheet'" as="style" crossorigin="anonymous" type="text/css">

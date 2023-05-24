@@ -10,6 +10,10 @@ paths:
   uploads: "assets/images"
 css_dir: "/style"
 
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:title
 
 comments:
  body_font_family: Add the font code block on the configurations menu
@@ -18,17 +22,13 @@ comments:
  custom_css_code_block: 'Add custom styles to your site (SCSS-compatible). This theme uses TailwindCSS 2.1. Important: You might require the assistance of a developer.'
 
 plugins:
-  - jekyll-sitemap
-  - jekyll-webp
+  - jekyll-sitemap  
   - jekyll-postcss
   - jekyll-purgecss
+  - jekyll-last-modified-at
+  - jekyll_picture_tag
 
-webp:
-  enabled: true
-  nested: true
-  img_dir: ["/assets/images"]
-  regenerate: false
-  
+
 channels:
   - "Facebook"
   - "Instagram"

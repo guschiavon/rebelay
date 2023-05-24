@@ -4,17 +4,22 @@ layout: default
 
 <main class="article-wrapper">
   <div class="container mx-auto md:px-16 py-8">
-    <article class="article w-3/5 mx-auto bg-gray-50 px-10">
+    <article class="article w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
-        <h1 class="article-header--title text-3xl md:text-4xl lg:text-6xl text-yellow-400 font-display">
+        <div class="article-feature-image">
+          <img src="{{page.feature_image}}" alt="{{page.feature_image_alt_text}}" class="responsive-img">
+          <caption>{{page.feature_image_alt_text}}</caption>
+        </div>
+        <h1 class="article-header--title text-3xl md:text-4xl lg:text-6xl text-yellow-400 font-display py-6" itemprop="title">
           {{page.display_title}}
         </h1>
       </header>
-      <section class="article-byline">
-        <p class="article-byline--author text-sm">Words by: {{page.article_writer}}</p>
-        <p class="article-byline--author text-sm">Photos by: {{page.article_photographer}}</p>
+      <section class="article-byline flex gap-4 py-4">
+        <p class="article-byline--author text-sm font-extralight">Words by: {{page.article_writer}}</p>
+        <p class="article-byline--author text-sm  font-extralight">Photos by: {{page.article_photographer}}</p>
       </section>
-      <section class="article-content">
+      <hr class="text-yellow-400 py-2">
+      <section class="article-content bg-gray-50" itemprop="content">
         {{content}}
       </section>
     </article>

@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2020/01/31/taiwan-canyoning-expedition.html</loc>
-<lastmod>2020-01-31T07:20:00-03:00</lastmod>
+<loc>http://localhost:4000/2020/01/taiwan-canyoning-expedition</loc>
+<lastmod>2023-05-24T00:29:20-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2020/02/27/bali.html</loc>
-<lastmod>2020-02-27T06:00:00-03:00</lastmod>
+<loc>http://localhost:4000/2020/01/interview-with-gertjan</loc>
+<lastmod>2023-05-24T16:55:48-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2020/04/07/iran.html</loc>
-<lastmod>2020-04-07T06:20:00-03:00</lastmod>
+<loc>http://localhost:4000/2020/02/bali</loc>
+<lastmod>2023-05-24T00:29:20-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2020/04/19/pnw.html</loc>
-<lastmod>2020-04-19T06:20:00-03:00</lastmod>
+<loc>http://localhost:4000/2020/04/iran</loc>
+<lastmod>2023-05-24T00:29:20-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2020/04/pnw</loc>
+<lastmod>2023-05-24T00:29:20-03:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
+<lastmod>2023-05-24T00:29:20-03:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/admin/</loc>

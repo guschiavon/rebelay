@@ -1,16 +1,19 @@
-<div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-gray-800">
+<div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-gray-900">
   <a href="/" class="w-36 md:w-28 lg:w-36 lg:h-10 mx-auto block" aria-label="Homepage">
     <img src="{{site.data.settings.branding.nav_logo_image}}" alt="{{site.data.settings.branding.site_title}} logo" class="object-contain">
   </a>
-  <nav id="nav-bar-menu" class="nav-bar-menu absolute z-40 inset-0 transform -translate-x-full py-12 md:py-0 md:mt-8 px-6 flex justify-around items-start md:items-center md:px-0  md:relative md:transform md:-translate-x-0 md:inset-auto transition-transform duration-300">
+  <nav id="nav-bar-menu" class="nav-bar-menu py-4 md:py-6 md:mt-2 px-6 flex justify-around items-start md:items-center transition-transform duration-300">
     <!-- Nav menu items are rendered from the `settings.yml` file located in the `_data` folder -->
     {% for menu in site.data.settings.navigation.menus %}
     {% unless menu.is_dropdown %}
-    <a href="{{menu.url}}" class="nav-bar-menu--item font-display {% if menu.style_as_button %}py-2 px-6 bg-primary_color text-gray-100 rounded-full{%else%}px-4{% endif %} lg:ml-3 lg:text-base md:text-sm md:px-2 md:ml-1 uppercase text-gray-300 hover:text-yellow-400 transition-colors duration-75 tracking-widest font-extralight">
-    {{ menu.name }}
-    </a>
+    <div class="group px-2 md:px-4 flex items-center gap-x-1">
+      <span class="nav-bar-menu--item__icon">:</span>
+      <a href="{{menu.url}}" class="nav-bar-menu--item">
+      {{ menu.name }}
+      </a>
+    </div>
     {% else %}
-    <button class="nav-bar-menu--item group relative {% if menu.style_as_button %}py-2 px-4 bg-primary_color text-gray-100 rounded-full{% endif %} px-4 lg:ml-3 lg:text-base md:text-sm md:px-2 md:ml-1 uppercase tracking-wide text-gray-300 hover:text-yellow-400 transition-colors duration-75">
+    <button class="nav-bar-menu--item group relative ">
       {{menu.name}}
       <div class="absolute bg-gray-300 flex flex-col group-hover:opacity-100 group-hover:z-90 group-focus-within:opacity-100 opacity-0 transition-opacity py-2 rounded w-full">
       {% for submenu in menu.submenus %}
@@ -23,9 +26,9 @@
     {% endunless %}
     {% endfor %}    
   </nav>
-  <button id="burger" class="burger relative flex flex-col h-8 justify-between md:hidden w-10 z-50 transition-all">
+  <!-- <button id="burger" class="burger relative flex flex-col h-8 justify-between md:hidden w-10 z-50 transition-all">
     <span class="bg-yellow-600 h-1 w-full rounded-md"></span>    
     <span class="bg-yellow-600 h-1 w-full rounded-md"></span>
     <span class="bg-yellow-600 h-1 w-full rounded-md"></span>
-  </button>
+  </button> -->
 </div>
