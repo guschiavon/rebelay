@@ -18,7 +18,7 @@
     "button_outline_border_color": "#222222"
   },
   "fonts": {
-    "body_font_family": "",
-    "heading_font_family": ""
+    "body_font_family": "'Manrope', sans-serif",
+    "display_font_family": "'Alexandria', sans-serif"
   }
 }

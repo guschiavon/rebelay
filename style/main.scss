@@ -1,9 +1,12 @@
 ---
 ---
 
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "/_sass/_utilities.scss";
+@import "/_sass/_universal.scss";
+@import "/_sass/_blog-components.scss";
 
 {{site.data.settings.configuration.custom_css_code_block}};

@@ -1,0 +1,6 @@
+.blog-card {
+
+  &--image { 
+    @apply h-64 w-full overflow-hidden;
+  }
+}

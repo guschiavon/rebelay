@@ -9,7 +9,15 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: customTheme,
+    extend: {
+      fontSize: {
+        "tiny": '0.75rem'
+      },
+      fontFamily: {
+        "display": customTheme.fonts.display_font_family,
+        "body": customTheme.fonts.body_font_family
+      },
+    }
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],

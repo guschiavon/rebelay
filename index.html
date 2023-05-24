@@ -1,0 +1,69 @@
+---
+layout: default
+title: Rebelay Canyoning
+feature_image:
+feature_image_alt_text:
+feature_video:
+  title: We are Canyoneers
+  url:
+  description:
+description: 
+keywords:
+page_configuration:
+  head_code_block:
+  body_code_block:  
+---
+{% assign post = site.posts | first %}
+<main class="atf-bg py-32 md:py-40 relative bg-center bg-cover bg-no-repeat" style="background-image: url({{post.feature_image}});">
+  <div class="container mx-auto px-4 md:px-16 py-4 md:py-24">
+    <h1 class="text-6xl font-display font-bold mb-6 editable text-gray-50 relative tracking-wide">
+      {{post.display_title}}
+    </h1>
+    <a href="{{post.url}}"
+      class="font-display relative inline-block editable py-2 text-2xl uppercase tracking-wider text-yellow-400 rounded-md" aria-label="read blog article titled {{post.display_title}}">
+      Read article
+    </a>
+  </div>
+</main>
+<div class="container mx-auto px-16 py-6">
+  <hr class="py-2">
+  <h2 class="section-header font-display font-semibold">Descent Stories</h2>
+  <p class="pb-6">Read some epic stories from descents around the world, curated by Re:Belay</p>
+  <div class="flex justify-between gap-x-4">
+    {% assign posts = site.posts%}
+    {% for post in posts | offset: 1 %}
+    <article itemscope itemtype="https://schema.org/Article" class="blog-card bg-gray-100 flex-1 flex flex-col justify-between">
+      <div class="blog-card--image">
+        <img src="{{post.feature_image}}" alt="{{post.feature_image_alt_text}}" class="bg-image">
+      </div>
+      <div class="p-4">
+        
+        <a href="{{post.url}}" class="py-2">
+          <h2 class="blog-card--title font-display text-2xl capitalize align-top">{{ post.display_title }}</h2>
+        </a>
+        <a href="{{post.url}}">
+          <p class="blog-card--description text-sm py-2">{{post.description}}</p>
+        </a>
+        <p class="text-gray-600 text-tiny md:text-xs py-2">By {{post.article_writer}}</p>        
+      </div>      
+    </article>
+    {% endfor %}
+  </div>
+</div>
+<section class="container mx-auto py-6 md:px-16">
+  <hr class="py-2">
+  <h2 class="section-header">Featured Video</h2>
+  <h3 class="section-subheader">{{page.feature_video.title}}</h3>
+</section>
+<!-- Netlify Script -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

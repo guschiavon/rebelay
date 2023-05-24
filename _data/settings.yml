@@ -14,8 +14,8 @@ general:
       add_to_chat_bubble: true
       url: 'https://facebook.com'
 branding:
-  site_title: Jekyll Tailwind CloudCannon
-  nav_logo_image: /assets/images/logo.png
+  site_title: 'Re:belay Canyoning'
+  nav_logo_image: /assets/images/rebelay-logo-with-tagline-light-full-width.png
   footer_logo_image:
   preview_image:
 navigation:
@@ -27,20 +27,23 @@ navigation:
       submenus:
         - name:
           url:
-    - name: Dropdown
+    - name: Articles
       url: '#'
-      is_dropdown: true
+      is_dropdown: false
       style_as_button: false
       submenus:
         - name: Item 1
-          url: /
-        - name: Item 2
-          url: /
-        - name: Item 3
-          url: /
-    - name: More
+          url: /        
+    - name: Community
       url: '#'
-      is_dropdown: true
+      is_dropdown: false
+      style_as_button: false
+      submenus:
+        - name: Item 1
+          url: /        
+    - name: Merch
+      url: '#'
+      is_dropdown: false
       style_as_button: false
       submenus:
         - name: Item 1
@@ -53,6 +56,9 @@ seo:
   site_description_text:
   keywords:
 configuration:
-  head_code_block: 
+  head_code_block: >-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet preload" onload="this.rel = 'stylesheet'" as="style" crossorigin="anonymous" type="text/css">
   body_code_block:
   custom_css_code_block:   

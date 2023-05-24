@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/2020/01/31/taiwan-canyoning-expedition.html</loc>
+<lastmod>2020-01-31T07:20:00-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2020/02/27/bali.html</loc>
+<lastmod>2020-02-27T06:00:00-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2020/04/07/iran.html</loc>
+<lastmod>2020-04-07T06:20:00-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2020/04/19/pnw.html</loc>
+<lastmod>2020-04-19T06:20:00-03:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/admin/</loc>
-<lastmod>2022-05-11T10:49:48-03:00</lastmod>
+<lastmod>2023-05-22T13:07:32-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/pages/about.html</loc>
+<lastmod>2023-05-22T13:15:30-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/style/fonts/frontage-regular-demo.html</loc>
+<lastmod>2023-05-23T16:54:44-03:00</lastmod>
 </url>
 </urlset>

@@ -1,0 +1,9 @@
+.bg-image {
+  @apply object-cover object-center w-full h-full;
+}
+.section-header {
+  @apply text-3xl;
+}
+.section-subheader {
+  @apply uppercase text-2xl font-semibold;
+}
