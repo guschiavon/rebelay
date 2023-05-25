@@ -1,15 +1,23 @@
 .bg-image {
   @apply object-cover object-center w-full h-full;
 }
+
 .section-heading {
   @apply text-3xl font-display font-semibold;
 }
 .section-subheader {
   @apply uppercase text-2xl font-semibold;
 }
-
+.nav-bar-menu {
+  @apply py-4 md:py-0 md:pt-6 md:pb-2 md:mt-2 px-6 flex justify-around items-start md:items-center transition-transform duration-300;
+}
+.nav-bar--logo {
+  @apply w-36 md:w-28 lg:w-36 lg:h-10 mx-auto block;
+}
 .nav-bar-menu--item {
-  @apply font-display text-sm md:text-base  uppercase text-gray-300 group-hover:text-yellow-400 transition-colors duration-75 tracking-widest font-extralight;
+  &__link {
+    @apply font-display text-sm md:text-base uppercase text-gray-700 group-hover:text-yellow-400 transition-colors duration-75 tracking-widest font-extralight;
+  }
   &__icon {
     @apply font-display font-bold text-lg md:text-2xl text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity;
   }

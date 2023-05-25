@@ -1,14 +1,14 @@
-<div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-gray-900">
-  <a href="/" class="w-36 md:w-28 lg:w-36 lg:h-10 mx-auto block" aria-label="Homepage">
+<div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-transparent">
+  <a href="/" class="nav-bar--logo" aria-label="Homepage">
     <img src="{{site.data.settings.branding.nav_logo_image}}" alt="{{site.data.settings.branding.site_title}} logo" class="object-contain">
   </a>
-  <nav id="nav-bar-menu" class="nav-bar-menu py-4 md:py-6 md:mt-2 px-6 flex justify-around items-start md:items-center transition-transform duration-300">
+  <nav id="nav-bar-menu" class="nav-bar-menu">
     <!-- Nav menu items are rendered from the `settings.yml` file located in the `_data` folder -->
     {% for menu in site.data.settings.navigation.menus %}
     {% unless menu.is_dropdown %}
     <div class="group px-2 md:px-4 flex items-center gap-x-1">
       <span class="nav-bar-menu--item__icon">:</span>
-      <a href="{{menu.url}}" class="nav-bar-menu--item">
+      <a href="{{menu.url}}" class="nav-bar-menu--item__link">
       {{ menu.name }}
       </a>
     </div>

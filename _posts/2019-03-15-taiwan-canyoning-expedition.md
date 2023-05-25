@@ -9,7 +9,7 @@ date: 2020-01-31 10:20:00
 feature_image: >-
   /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg
 article_number: 1
-article_writer: Gus Schiavon
+article_writer: gus
 article_photographer: Gus Schiavon
 paragraph_image: >-
   /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-18.jpg

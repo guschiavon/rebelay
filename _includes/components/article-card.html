@@ -1,0 +1,16 @@
+<article itemscope itemtype="https://schema.org/Article" class="blog-card bg-gray-100 w-96 flex-shrink-0 flex flex-col justify-between">
+  <div class="blog-card--image">
+    <img src="{{post.feature_image}}" alt="{{post.feature_image_alt_text}}" class="bg-image">
+  </div>
+  <div class="p-4 flex flex-col justify-between">
+    <span class="uppercase font-display font-extralight text-gray-500 text-xs">{{post.date | date_to_string}}</span>
+    <a href="{{post.url}}" class="py-2">
+      <h2 class="blog-card--title font-display text-2xl capitalize align-top">{{ post.display_title }}</h2>
+    </a>
+    <a href="{{post.url}}">
+      <p class="blog-card--description text-sm py-2">{{post.description}}</p>
+    </a>
+    {% assign author = site.data.authors[post.article_writer] %}
+    <p class="text-gray-600 text-tiny md:text-xs py-2">By {{author.name}}</p>
+  </div>
+</article>

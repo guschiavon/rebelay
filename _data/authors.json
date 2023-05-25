@@ -1,0 +1,50 @@
+{
+  "gus": {
+    "name": "Gus Schiavon",
+    "profile_image": "/assets/images/author-gus-schiavon.jpg",
+    "location": "Brazil",
+    "bio_html": "Gus is a canyoning instructor, trainer and photographer based in Brazil. His active participation in international expeditions and high-profile descents have produced epic accounts of canyoning and inspired many to follow their passion. Gus is the Editor of Re:belay.com",
+    "channels": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/v7gus"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/gusschiavon"
+      }
+    ]
+  },
+  "imin": {
+    "name": "Supersmarindo",
+    "profile_image": "/assets/images/author-supersmarindo.jpg",
+    "location": "Bali, Indonesia",
+    "bio_html": "Born in wild Sumatra in the indonesian archipelago, Imin is a skilled canyoneer and talented photographer based in Bali. With extensive experience working for commercial canyoning operators, Imin is also a professional adventure guide and runs his own tour company, adventure4good.id, where a portion of profits are reverted to social programs.",
+    "channels": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/shotsincanyon"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/supersmarindo"
+      }
+    ]   
+  },
+  "jake": {
+    "name": "Jake Huddleston",
+    "profile_image": "/assets/images/author-jake-huddleston.jpg",
+    "location": "Seattle, USA",
+    "bio_html": "Jake is a canyoneer, photographer, and filmmaker based out of Seattle, Washington, USA. Also a guide and instructor, Jake’s passion for canyoning has led him to many amazing places around the world, with a primary focus on exploring new canyon routes in the Pacific Northwest and helping to develop a strong local community there.",
+    "channels": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/jake_huddleston"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/jakehuddlestonmedia"
+      }
+    ]   
+  }
+}

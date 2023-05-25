@@ -10,9 +10,9 @@ general:
       url: 'https://instagram.com/rebelay.canyoning'
 branding:
   site_title: 'Re:belay Canyoning'
-  nav_logo_image: /assets/images/rebelay-logo-with-tagline-light-full-width.png
+  nav_logo_image: /assets/images/rebelay-nav-logo-dark.png
   footer_logo_image: /assets/images/rebelay-icon-dark.png
-  preview_image: /assets/images/rebelay-logo-with-tagline-light-full-width.png
+  preview_image: /assets/images/preview-rebelay-logo-dark.jpg  
 navigation:
   menus:
     - name: About
@@ -23,21 +23,21 @@ navigation:
         - name:
           url:
     - name: Articles
-      url: '#'
+      url: /stories
       is_dropdown: false
       style_as_button: false
       submenus:
         - name: Item 1
           url: /        
-    - name: Community
-      url: '#'
+    - name: Resources
+      url: /resources
       is_dropdown: false
       style_as_button: false
       submenus:
         - name: Item 1
           url: /        
     - name: Merch
-      url: '#'
+      url: /shop
       is_dropdown: false
       style_as_button: false
       submenus:
