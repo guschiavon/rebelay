@@ -3,10 +3,13 @@
 }
 
 .section-heading {
-  @apply text-3xl font-display font-semibold;
+  @apply text-xl md:text-3xl font-display font-semibold;
 }
 .section-subheader {
-  @apply uppercase text-2xl font-semibold;
+  @apply font-display uppercase text-sm sm:text-base md:text-xl font-semibold tracking-wide;
+}
+.section-paragraph {
+  @apply text-tiny sm:text-sm md:text-base font-light tracking-wide;
 }
 .nav-bar-menu {
   @apply py-4 md:py-0 md:pt-6 md:pb-2 md:mt-2 px-6 flex justify-around items-start md:items-center transition-transform duration-300;
@@ -15,10 +18,46 @@
   @apply w-36 md:w-28 lg:w-36 lg:h-10 mx-auto block;
 }
 .nav-bar-menu--item {
+  @apply relative px-2 md:px-4 flex items-end justify-between md:justify-evenly gap-x-1;
   &__link {
-    @apply font-display text-sm md:text-base uppercase text-gray-700 group-hover:text-yellow-400 transition-colors duration-75 tracking-widest font-extralight;
+    @apply font-display text-tiny sm:text-xs md:text-base uppercase text-gray-700 group-hover:text-yellow-400 transition-colors duration-75 tracking-widest font-extralight;
   }
   &__icon {
     @apply font-display font-bold text-lg md:text-2xl text-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity;
   }
+  &__dropdown {
+    @apply absolute bg-gray-300 flex flex-col opacity-0 transition-opacity py-2 rounded w-full;
+  }
+}
+.blog-card {
+  &:first-of-type {
+    @apply ml-6 lg:ml-0;
+  }
+  &:last-of-type {
+    @apply mr-6 lg:mr-0;
+  }
+}
+
+.creator-cta {
+  @apply relative flex flex-col items-center justify-center h-64 bg-center bg-cover;
+  &::before {
+    content: '';
+    @apply absolute inset-0 w-full h-full bg-gray-700 opacity-40;
+  }
+}
+.interview-preview {
+  @apply flex-1 h-auto md:h-72 lg:h-96 relative;  
+  &::before {
+    content: '';
+    @apply h-3/5 w-24 bg-yellow-600 absolute -left-16 top-14 transform translate-x-1/2 translate-y-1/2;
+  }
+}
+.interview-preview--content {
+  @apply flex flex-col items-center md:items-start justify-center gap-y-4 h-full bg-gray-800 relative;
+}
+.newsletter-input--email {
+  @apply p-2 font-display border-b-2 border-gray-50 bg-transparent text-gray-50;
+}
+.newsletter-input--email::placeholder {
+  @apply text-gray-50 bg-transparent;
 }

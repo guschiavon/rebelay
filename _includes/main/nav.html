@@ -6,18 +6,18 @@
     <!-- Nav menu items are rendered from the `settings.yml` file located in the `_data` folder -->
     {% for menu in site.data.settings.navigation.menus %}
     {% unless menu.is_dropdown %}
-    <div class="group px-2 md:px-4 flex items-center gap-x-1">
+    <div class="nav-bar-menu--item group">
       <span class="nav-bar-menu--item__icon">:</span>
       <a href="{{menu.url}}" class="nav-bar-menu--item__link">
       {{ menu.name }}
       </a>
     </div>
     {% else %}
-    <button class="nav-bar-menu--item group relative ">
+    <button class="nav-bar-menu--item group">
       {{menu.name}}
-      <div class="absolute bg-gray-300 flex flex-col group-hover:opacity-100 group-hover:z-90 group-focus-within:opacity-100 opacity-0 transition-opacity py-2 rounded w-full">
+      <div class="nav-bar-menu--item__dropdown group-focus-within:opacity-100 group-hover:opacity-100 group-hover:z-90">
       {% for submenu in menu.submenus %}
-        <a href="{{submenu.url}}" class="">
+        <a href="{{submenu.url}}" class="nav-bar-menu--item__link">
         {{submenu.name}}
         </a>
       {% endfor %}

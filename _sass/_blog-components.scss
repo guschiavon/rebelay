@@ -4,3 +4,27 @@
     @apply h-64 w-full overflow-hidden;
   }
 }
+.social-icons {
+  @apply flex flex-row gap-3 md:gap-6 items-center justify-start;
+}
+
+.social-share-icon {
+  aspect-ratio: 1 / 1;
+  padding: 0.4rem;
+  @apply block h-6 w-6 rounded-full bg-yellow-400 shadow-sm;
+
+  svg {
+    fill: rgb(67, 67, 67);
+  }
+}
+.article-content--image {
+  @apply block w-full h-56 md:h-96 lg:h-full mb-6 md:mb-3 p-4;
+}
+
+.article-content--image img {
+  @apply object-contain w-full h-full p-2;
+}
+
+.article-content--image caption {
+  @apply block w-full italic text-sm;
+}

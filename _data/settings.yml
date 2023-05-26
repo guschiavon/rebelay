@@ -42,11 +42,7 @@ navigation:
       style_as_button: false
       submenus:
         - name: Item 1
-          url: /
-        - name: Item 2
-          url: /
-        - name: Item 3
-          url: /
+          url: /              
 seo:
   site_description_text:
   keywords:

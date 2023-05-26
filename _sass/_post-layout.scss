@@ -34,7 +34,8 @@
     @apply list-inside list-disc font-semibold;
   }
 }
-.related-posts--container {
+.related-posts--container,
+.articles-wrapper {
   &::-webkit-scrollbar {
         @apply p-2 bg-transparent;
   }

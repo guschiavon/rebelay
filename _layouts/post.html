@@ -4,7 +4,7 @@ layout: default
 
 <main class="article-wrapper">
   <div class="container mx-auto md:px-16 py-8">
-    <article class="article w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
+    <article class="article md:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
         <div class="article-feature-image">
           <img src="{{page.feature_image}}" alt="{{page.feature_image_alt_text}}" class="responsive-img">
@@ -16,7 +16,7 @@ layout: default
           {{page.display_title}}
         </h1>
         <div class="article-byline flex flex-col md:flex-row gap-4 justify-center md:justify-between items-center py-4">
-          {% assign author = site.data.authors[page.article_writer] %}
+          {% assign author = site.data.authors[page.author] %}
           <div class="flex items-center justify-center md:justify-start gap-2 md:gap-4">
             <div class="rounded-full w-14 h-14 border-t-4 border-white overflow-hidden">
               <img src="{{author.profile_image}}" alt="Profile photo of {{author.name}}, writer of this article">
@@ -25,24 +25,30 @@ layout: default
           </div>           
           <span class="font-light font-display text-sm">{{page.date | date_to_string}}</span>
         </div>
-
+        <div class="py-2 sticky">
+          {% include components/share-menu.html %}
+        </div>
       </header>
       <hr class="text-yellow-400 py-2">
       <section class="article-content" itemprop="content">
         {{content}}
       </section>
+      <div class="py-2 sticky">
+        {% include components/share-menu.html %}
+      </div>
+      
     </article>
     <aside class="md:w-3/5 bg-gray-300 rounded-md shadow-md p-4 md:p-6 mx-auto mt-8">
-      <span class="block font-display text-yellow-500 text-lg uppercase tracking-wide pb-4">About the author</span>
+      <span class="block font-display text-yellow-500 text-lg uppercase text-center md:text-left tracking-wide pb-4">About the author</span>
       <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
         <div class="rounded-full flex-shrink-0 w-24 h-24 overflow-hidden">
           <img src="{{author.profile_image}}" alt="Profile photo of {{author.name}}, writer of this article" class="responsive-img">
         </div>
         <p class="article-byline--author text-sm font-extralight">{{author.bio_html}}</p>
-        <div class="author-social">
+        <div class="author-social flex-row md:flex-col">
           {% for channel in author.channels %}
-          <a href="{{channel.url}}" class="block w-10 h-10 p-2" aria-label="Click to access {{author.name}}'s {{channel.plaform}} profile">
-            {% include social-icons.html  icon=channel.platform %}           
+          <a href="{{channel.url}}" class="inline-flex w-10 h-10 p-2" aria-label="Click to access {{author.name}}'s {{channel.plaform}} profile" target="_blank" rel="noopener noreferrer">
+            {% include social-icons.html icon=channel.platform %}           
           </a>
           {% endfor %}
         </div>
@@ -57,9 +63,28 @@ layout: default
   <div class="container mx-auto text-center py-6">
     <h2 class="section-heading">Read more stories</h2>
   </div>
-    <div class="pl-4 related-posts--container flex gap-x-4 py-6 overflow-x-scroll">
-      {% for post in site.posts %}
+    <div id="slider" class="pl-4 related-posts--container md:container md:mx-auto flex gap-x-4 py-6 overflow-x-scroll">
+      {% for post in site.posts limit: 3 %}
       {% include components/article-card.html %}      
       {% endfor %}
     </div>
 </div>
+<script>
+  const article = document.querySelector('.article-content');
+  const images = article.querySelectorAll('img');  
+  images.forEach((img) => {
+    let parent = img.parentNode;    
+    let wrapper = document.createElement('a');
+    let caption = document.createElement('caption');
+    caption.innerText = img.getAttribute('alt');
+    wrapper.classList.add('article-content--image');
+    // set the wrapper as child (instead of the element)
+    parent.replaceChild(wrapper, img);
+    // set element as child of wrapper
+    wrapper.appendChild(img);
+    wrapper.appendChild(caption);
+    wrapper.setAttribute('href', img.dataset.url);
+    wrapper.setAttribute('target', '_blank');
+    img.setAttribute('loading', 'lazy');
+  })
+  </script>
