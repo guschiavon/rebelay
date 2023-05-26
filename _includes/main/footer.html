@@ -1,8 +1,26 @@
 <footer class="bg-gray-300 py-6">
-  <div class="container mx-auto">
-    <a href="/" class="footer-logo w-16 h-16 overflow-hidden inline-block" aria-label="return to homepage">
-      <img src="{{site.data.settings.branding.footer_logo_image}}" alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full">
-    </a>
-    <p class="">Re:belay Canyoning</p>
+  <div class="container mx-auto px-4 md:px-10 lg:px-16">
+    <div class="flex items-center justify-between">
+
+      <a href="/" class="footer-logo w-16 h-16 overflow-hidden inline-block" aria-label="return to homepage">
+        <img src="{{site.data.settings.branding.footer_logo_image}}" alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full">
+      </a>
+      <nav class="footer-nav flex items-center justify-around gap-2 md:gap-6">
+        {% for link in site.data.settings.navigation.menus %}
+          <a href="{{link.url}}" class="nav-bar-menu--item__link">{{link.name}}</a>
+        {% endfor %}
+      </nav>
+      <div class="footer-social flex gap-1">
+        {% for item in site.data.settings.site_info.social %}
+        <a href="{{item.url}}" target="_blank" rel="noopener noreferrer" class="h-10 w-10 block p-2" aria-label="Click to visit our {{item.channel}} profile">{% include social-icons.html icon=item.channel %}</a>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="py-4 text-center">
+      <a class="text-xs font-display text-gray-500 underline uppercase px-2 py-1" href="/privacy">Privacy</a>
+      <a class="text-xs font-display text-gray-500 underline uppercase px-2 py-1" href="/conditions">Terms & Conditions</a>
+    </div>
+    <span class="block text-center text-tiny text-gray-500">All content © Re:belay Canyoning unless explicitly stated.</span>
   </div>
 </footer>

@@ -1,0 +1,65 @@
+presets:
+  atf-large:
+    markup: direct_url
+    fallback_width: 1600        
+    fallback_format: webp
+  atf-mobile:
+    markup: direct_url
+    fallback_widths: 450    
+    fallback_format: webp
+  direct:
+    markup: direct_url
+    fallback_width: 1200
+    fallback_format: webp
+  nav-logo:
+    markup: direct_url
+    fallback_width: 250
+    fallback_format: webp
+  preview:
+    markup: direct_url        
+    fallback_width: 600
+    fallback_format: webp
+  only_srcset:
+    markup: naked_srcset
+    widths: [360, 800, 1200, 1600]
+    formats: webp
+  small_logo:
+    markup: picture
+    widths: [200, 360]
+  xlarge:
+    markup: picture
+    formats: webp
+    widths: [600]
+  large:
+    markup: picture
+    formats: webp
+    widths: [500]
+  medium:
+    markup: picture
+    formats: webp
+    widths: [350]
+  small:
+    markup: picture
+    formats: webp
+    widths: [200]
+  xsmall:
+    markup: picture
+    formats: webp
+    widths: [150]  
+  thumb:
+    markup: picture
+    formats: webp
+    widths: [70]
+  category-post:
+    markup: picture
+    formats: webp
+    widths: [250, 400]
+  blog-feature:
+    markup: direct_url
+    formats: webp
+    widths: [1000]  
+  blog-preview:
+    markup: direct_url
+    formats: webp
+    fallback_format: webp
+    fallback_width: 450    

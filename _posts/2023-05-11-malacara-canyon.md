@@ -33,7 +33,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorem in 
 2. This is an ordered list item
 3. This is an ordered list item
 
-![This is a caption](/assets/images/bali/canyoning-rebelay-002-bali-005.jpg)
+![Descending Tukad Dalam in Bali's northern mountain range. Image ©Supersmarindo used under permission](/assets/images/bali/canyoning-rebelay-002-bali-005.jpg)
 
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorem in voluptatibus assumenda facilis. Ratione beatae iure error at deleniti. Numquam sequi suscipit aut qui nobis deleniti, eveniet eos excepturi?

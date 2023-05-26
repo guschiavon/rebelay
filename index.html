@@ -25,12 +25,12 @@ page_configuration:
 <main class="atf-bg py-32 md:py-40 relative bg-center bg-cover bg-no-repeat" style="background-image: url({{post.feature_image}});">
   <div class="container mx-auto px-4 md:px-16 py-4 md:py-24">
     <a href="{{post.url}}">
-      <h1 class="text-4xl md:text-6xl font-display font-bold mb-6 editable text-gray-50 relative tracking-wide hover:text-yellow-400 transition-colors">
+      <h1 class="atf-heading">
         {{post.display_title}}
       </h1>
     </a>
     <a href="{{post.url}}">
-      <p class="font-body tracking-wide text-lg md:text-2xl font-light text-gray-200">{{post.description}}</p>
+      <p class="atf-paragraph">{{post.description}}</p>
     </a>
     <span class="block font-body tracking-wide text-sm font-light text-gray-200">By {{site.data.authors[post.author].name}}</span>
     <a href="{{post.url}}"

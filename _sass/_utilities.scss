@@ -1,15 +1,20 @@
 .bg-image {
   @apply object-cover object-center w-full h-full;
 }
-
+.atf-heading {
+  @apply text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-6 text-gray-50 relative tracking-wide hover:text-yellow-400 transition-colors;
+}
+.atf-paragraph {
+  @apply font-body tracking-wide text-base md:text-lg lg:text-2xl font-light text-gray-200;
+}
 .section-heading {
-  @apply text-xl md:text-3xl font-display font-semibold;
+  @apply text-xl md:text-2xl lg:text-3xl font-display font-semibold;
 }
 .section-subheader {
   @apply font-display uppercase text-sm sm:text-base md:text-xl font-semibold tracking-wide;
 }
 .section-paragraph {
-  @apply text-tiny sm:text-sm md:text-base font-light tracking-wide;
+  @apply text-tiny sm:text-sm lg:text-base font-light tracking-wide;
 }
 .nav-bar-menu {
   @apply py-4 md:py-0 md:pt-6 md:pb-2 md:mt-2 px-6 flex justify-around items-start md:items-center transition-transform duration-300;
