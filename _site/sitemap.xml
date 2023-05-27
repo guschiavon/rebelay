@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://0.0.0.0:4000/about</loc>
-<lastmod>2023-05-26T16:12:19-03:00</lastmod>
+<lastmod>2023-05-26T18:47:28-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/resources</loc>
@@ -18,7 +18,7 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/02/bali</loc>
-<lastmod>2023-05-26T16:12:19-03:00</lastmod>
+<lastmod>2023-05-26T18:47:28-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/04/iran</loc>
@@ -38,11 +38,11 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2023/05/malacara-canyon</loc>
-<lastmod>2023-05-26T16:46:55-03:00</lastmod>
+<lastmod>2023-05-26T18:47:28-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/</loc>
-<lastmod>2023-05-26T16:46:55-03:00</lastmod>
+<lastmod>2023-05-26T18:47:28-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/admin/</loc>

@@ -1,5 +1,9 @@
 presets:
-  atf-large:
+  atf-img-large:
+    markup: picture
+    widths: [1024, 1600]
+    formats: webp
+  atf-bg-large:
     markup: direct_url
     fallback_width: 1600        
     fallback_format: webp

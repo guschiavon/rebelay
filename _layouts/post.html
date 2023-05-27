@@ -7,7 +7,7 @@ layout: default
     <article class="article md:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
         <div class="article-feature-image">
-          <img src="{{page.feature_image}}" alt="{{page.feature_image_alt_text}}" class="responsive-img">
+          {% picture atf-img-large "{{page.feature_image}}" --img alt="{{page.feature_image_alt_text}}" class="responsive-img" %}
         </div>
         <span class="article-category block uppercase font-display text-gray-400 border-b-2 border-yellow-500 my-4 pb-1">
           {{page.article_category}}
@@ -19,7 +19,7 @@ layout: default
           {% assign author = site.data.authors[page.author] %}
           <div class="flex items-center justify-center md:justify-start gap-2 md:gap-4">
             <div class="rounded-full w-14 h-14 border-t-4 border-white overflow-hidden">
-              <img src="{{author.profile_image}}" alt="Profile photo of {{author.name}}, writer of this article">
+              {% picture xsmall "{{author.profile_image}}" --img alt="Profile photo of {{author.name}}, writer of this article" %}
             </div>
             <p class="article-byline--author text-sm font-extralight">Words by: {{author.name}}</p>
           </div>           
@@ -39,7 +39,7 @@ layout: default
         <div class="gallery">
           {% assign images = page.gallery %}
           <div class="grid grid-cols-1 md:grid-cols-2">
-                        
+
             <img src="{{images[0].image}}" alt="">
             <img src="{{images[1].image}}" alt="">
             <img src="{{images[2].image}}" alt="">

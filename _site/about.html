@@ -38,7 +38,11 @@
 <body class="min-h-screen flex flex-col overflow-x-hidden" style="scroll-behavior: smooth;">
   <div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-transparent">
   <a href="/" class="nav-bar--logo" aria-label="Homepage">
-    <img src="/assets/images/rebelay-nav-logo-dark.png" alt="Re:belay Canyoning logo" class="object-contain">
+    <picture>
+  <source srcset="/generated/assets/images/rebelay-nav-logo-dark-200-bc84958aa.png 200w, /generated/assets/images/rebelay-nav-logo-dark-250-bc84958aa.png 250w" type="image/png">
+  <img alt="Re:belay Canyoning logo" class="object-contain" src="/generated/assets/images/rebelay-nav-logo-dark-250-bc84958aa.png">
+</picture>
+
   </a>
   <nav id="nav-bar-menu" class="nav-bar-menu">
     <!-- Nav menu items are rendered from the `settings.yml` file located in the `_data` folder -->
@@ -87,7 +91,7 @@
   </button> -->
 </div>
   <div class="flex-1">
-    <div class="bg-gray-700 h-56 md:h-72 flex flex-col items-center justify-center gap-6">
+    <div class="from-bg-gray-700 to-bg-gray-500 h-56 md:h-72 flex flex-col items-center justify-center gap-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
     <h1 class="atf-heading">Re:belay is Pure Canyoning</h1>
     
@@ -114,10 +118,13 @@
   
   <footer class="bg-gray-300 py-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
-    <div class="flex items-center justify-between">
-
+    <div class="flex flex-col md:flex-row items-center justify-between gap-y-5 md:gap-y-0">
       <a href="/" class="footer-logo w-16 h-16 overflow-hidden inline-block" aria-label="return to homepage">
-        <img src="/assets/images/rebelay-icon-dark.png" alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full">
+        <picture>
+  <source srcset="/generated/assets/images/rebelay-icon-dark-150-aba7414c2.webp 150w" type="image/webp">
+  <img alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full" src="/generated/assets/images/rebelay-icon-dark-800-b48225ba6.png">
+</picture>
+
       </a>
       <nav class="footer-nav flex items-center justify-around gap-2 md:gap-6">
         
