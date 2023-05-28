@@ -22,7 +22,7 @@ page_configuration:
 ---
 
 {% assign post = site.posts | first %}
-<main class="atf-bg py-32 md:py-40 relative bg-center bg-cover bg-no-repeat" style='background-image: url({% picture atf-bg-large "{{post.feature_image}}"%});'>
+<main class="atf-bg py-32 md:py-40 relative bg-center bg-cover bg-no-repeat" style='background-image: url({% picture atf-bg-large "{{post.feature_image}}" %});'>
   <div class="container mx-auto px-4 md:px-16 py-4 md:py-24">
     <a href="{{post.url}}">
       <h1 class="atf-heading">
@@ -55,10 +55,8 @@ page_configuration:
     {% assign interviews = site.posts | where_exp: "itw", "itw.category == 'interview'" %}
     {% assign interview = interviews[1] %}
     <div class="flex flex-col md:flex-row items-center">
-      <div class="flex-1 flex-shrink-0">
-        <div class="">
-          {% picture xlarge "{{interview.feature_image}}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img" %}
-        </div>
+      <div class="flex-1 flex-shrink-0">        
+        {% picture xlarge "{{interview.feature_image}}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img"%}                  
       </div>
       <div class="interview-preview">
         <div class="interview-preview--content p-6">
@@ -83,7 +81,7 @@ page_configuration:
     <div class="newsletter-form flex-1">
       <form action="alert('Success')" method="post" class="flex flex-col gap-2">
         <input type="email" name="email" placeholder="Your Email" class="newsletter-input--email">
-        <input type="submit" value="Sign Up" class="font-light uppercase transform shadow-md py-2 hover:scale-105 hover:shadow-sm hover:bg-gray-200 transition-all text-yellow-400 bg-gray-100 tracking-wider font-display ">
+        <input type="submit" value="Sign Up" class="form-btn">
       </form>
     </div>
   </div>
@@ -105,7 +103,7 @@ page_configuration:
   </div>
 </section>
 <div class="container mx-auto text-center px-4 md:px-10 lg:px-16 mb-6">
-  <div class="creator-cta" style="background-image: url({% picture direct "/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg" %});">
+  <div class="creator-cta" style='background-image: url({% picture direct "/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg" %});'>
     <h2 class="relative section-heading text-yellow-400">Calling all canyoning photographers and filmmakers</h2>
     <p class="section-paragraph relative text-gray-50 mb-4">Re:belay is a channel for you to reach your audience. We want to showcase your work. <br> Contact us to get featured on Re:belay.com</p>
     <a href="/about#contact" class="btn btn-solid--accent px-3 py-2 bg-yellow-500 hover:bg-yellow-400 font-display uppercase tracking-wider relative inline-block">Get in touch</a>

@@ -39,10 +39,10 @@
   <div id="nav-bar" class="px-10 lg:px-28 py-4 w-full bg-transparent">
   <a href="/" class="nav-bar--logo" aria-label="Homepage">
     <picture>
-  <source srcset="/generated/assets/images/rebelay-nav-logo-dark-200-bc84958aa.png 200w, /generated/assets/images/rebelay-nav-logo-dark-250-bc84958aa.png 250w" type="image/png">
+  <source srcset="/generated/assets/images/rebelay-nav-logo-dark-200-bc0389491.webp 200w" type="image/webp">
   <img alt="Re:belay Canyoning logo" class="object-contain" src="/generated/assets/images/rebelay-nav-logo-dark-250-bc84958aa.png">
 </picture>
-
+    
   </a>
   <nav id="nav-bar-menu" class="nav-bar-menu">
     <!-- Nav menu items are rendered from the `settings.yml` file located in the `_data` folder -->
@@ -91,37 +91,60 @@
   </button> -->
 </div>
   <div class="flex-1">
-    <div class="from-bg-gray-700 to-bg-gray-500 h-56 md:h-72 flex flex-col items-center justify-center gap-6">
+    <div class="bg-gray-gradient h-56 md:h-72 flex flex-col items-center justify-center gap-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
-    <h1 class="atf-heading">Re:belay is Pure Canyoning</h1>
+    <h1 class="atf-heading text-yellow-400">Re:belay is Pure Canyoning</h1>
     
   </div>
 </div>
 <div class="container mx-auto px-4 md:px-10 lg:px-16 py-6">
-  <p class="text-lg text-gray-700">
+  <p class="text-base md:text-lg text-gray-700">
     Re:belay is born out of passion.<br><br>Passion for adventure. For nature. Passion for travel, photography, for
     friendship. Passion for canyoning.
     <br><br>Re:belay is a collection of epic canyoning descents, stories and interviews aimed at inspiring canyoneers to not only practice,
     but live the sport.<br><br>Re:belay is pure canyoning.
   </p>
 </div>
-<div id="contact" class="py-10">
-  <div class="container mx-auto px-4 md:px-10 lg:px-16">
+<div id="contact" class="bg-yellow-500 py-10">
+  <div class="container mx-auto px-4 md:px-10 lg:px-16"> 
+    <div class="flex flex-col md:flex-row gap-6">
+      <div class="flex-1">
+        <h2 class="section-heading">
+          Contact us
+        </h2>
+        <p class="font-body text-base md:text-lg">Get featured on Re:belay.<br><br>Writers, photographers, filmmakers who are passionate about canyoning: this is a space for you.</p>
+      </div>
+      <div class="flex-1">
+        <div class="py-6">
+          <form id="contact-form" action="" class="contact-form">
+            <input type="email" placeholder="Email" class="form-input" required>
+            <input type="name" placeholder="Name" class="form-input" required>            
+            <select name="subject" id="subject" class="form-input">
+              <option value="" disabled selected>Re:</option>
+              <option value="general">General Inquiries</option>
+              <option value="creators">I want to be featured</option>
+              <option value="events">I want to promote an event</option>
+              <option value="business">I want to promote my business</option>
+            </select>
+            <textarea name="" id="" rows="7" class="form-input" placeholder="How can we help?" required>
 
-    <h2 class="section-heading">
-      Contact us
-    </h2>
-    <p class="font-body">Get featured on Re:belay. Writers, photographers, filmmakers who are passionate about canyoning: this is a space for you.</p>
+            </textarea>
+            <input type="submit" value="Send message" class="form-btn">
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
   </div>
   
   <footer class="bg-gray-300 py-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-y-5 md:gap-y-0">
+    <div class="flex items-center justify-between">
+
       <a href="/" class="footer-logo w-16 h-16 overflow-hidden inline-block" aria-label="return to homepage">
         <picture>
-  <source srcset="/generated/assets/images/rebelay-icon-dark-150-aba7414c2.webp 150w" type="image/webp">
+  <source srcset="/generated/assets/images/rebelay-icon-dark-200-aba7414c2.webp 200w" type="image/webp">
   <img alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full" src="/generated/assets/images/rebelay-icon-dark-800-b48225ba6.png">
 </picture>
 

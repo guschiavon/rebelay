@@ -1,6 +1,10 @@
 .bg-image {
   @apply object-cover object-center w-full h-full;
 }
+.bg-gray-gradient {
+  background: rgb(25, 25, 25);
+  background: linear-gradient(318deg, rgba(25, 25, 25, 1) 0%, rgba(139, 139, 139, 1) 50%, rgba(69, 69, 69, 1) 100%);
+}
 .atf-heading {
   @apply text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-6 text-gray-50 relative tracking-wide hover:text-yellow-400 transition-colors;
 }
@@ -41,6 +45,28 @@
   &:last-of-type {
     @apply mr-6 lg:mr-0;
   }
+}
+
+.contact-form {
+  @apply flex flex-col gap-y-4;
+  .form-btn,
+  .form-input {
+    @apply w-full md:w-3/4 lg:w-1/2 mx-auto
+  }
+  .form-input {
+    @apply border-b-2 border-gray-700 bg-transparent;
+  }
+}
+.form-input {
+
+  @apply p-2;
+  &::placeholder,
+  option {
+    @apply text-gray-50 font-body;
+  }
+}
+.form-btn {
+  @apply font-light uppercase transform shadow-md py-2 hover:scale-105 hover:shadow-sm hover:bg-gray-200 transition-all text-yellow-400 bg-gray-100 tracking-wider font-display ;
 }
 
 .creator-cta {

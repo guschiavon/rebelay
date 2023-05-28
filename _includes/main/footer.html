@@ -1,8 +1,10 @@
 <footer class="bg-gray-300 py-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-y-5 md:gap-y-0">
+    <div class="flex items-center justify-between">
+
       <a href="/" class="footer-logo w-16 h-16 overflow-hidden inline-block" aria-label="return to homepage">
-        {% picture xsmall "{{site.data.settings.branding.footer_logo_image}}" --img alt="Rebelay logo" class="responsive-img object-cover object-center w-full h-full" %}
+        {% picture small "{{site.data.settings.branding.footer_logo_image}}" --img alt="Rebelay logo" class="responsive-img object-cover object-center
+        w-full h-full" %}
       </a>
       <nav class="footer-nav flex items-center justify-around gap-2 md:gap-6">
         {% for link in site.data.settings.navigation.menus %}

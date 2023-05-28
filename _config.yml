@@ -18,6 +18,11 @@ collections:
     output: true
     permalink: /:title
 
+picture:
+  source: "/"
+  output: "generated/"
+  suppress_warnings: true
+
 comments:
  body_font_family: Add the font code block on the configurations menu
  display_font_family: Add the font code block on the configuratios menu
