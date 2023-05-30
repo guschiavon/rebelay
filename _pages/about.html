@@ -6,26 +6,42 @@ keywords:
 ---
 <div class="bg-gray-gradient h-56 md:h-72 flex flex-col items-center justify-center gap-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
-    <h1 class="atf-heading text-yellow-400">Re:belay is Pure Canyoning</h1>
-    
+    <h1 class="atf-heading text-yellow-400">
+      Re:belay is Pure Canyoning
+    </h1>    
   </div>
 </div>
 <div class="container mx-auto px-4 md:px-10 lg:px-16 py-6">
   <p class="text-base md:text-lg text-gray-700">
     Re:belay is born out of passion.<br><br>Passion for adventure. For nature. Passion for travel, photography, for
     friendship. Passion for canyoning.
-    <br><br>Re:belay is a collection of epic canyoning descents, stories and interviews aimed at inspiring canyoneers to not only practice,
+    <br><br>Re:belay is a collection of epic canyoning descents, stories, interviews, gear shouts and apparel aimed at inspiring canyoneers to not only practice,
     but live the sport.<br><br>Re:belay is pure canyoning.
   </p>
+  <div class="py-6">
+    <p class="text-sm md:text-base text-gray-500 font-bold py-4">
+      Editor-in-chief: <br>
+      <span class="font-light inline-block text-gray-500">
+        Gus Schiavon
+      </span>  
+    </p>
+    <p class="text-sm md:text-base text-gray-500 font-bold">
+      Contributors:
+      <div class="flex flex-col gap-1">
+        {% for author in site.data.authors %}<span class="text-gray-500 font-light inline-block">{{author[1].name }}</span>{% endfor %}
+      </div>
+    </p>
+
+  </div>
 </div>
 <div id="contact" class="bg-yellow-500 py-10">
   <div class="container mx-auto px-4 md:px-10 lg:px-16"> 
     <div class="flex flex-col md:flex-row gap-6">
       <div class="flex-1">
-        <h2 class="section-heading">
+        <h2 class="section-heading text-gray-50">
           Contact us
         </h2>
-        <p class="font-body text-base md:text-lg">Get featured on Re:belay.<br><br>Writers, photographers, filmmakers who are passionate about canyoning: this is a space for you.</p>
+        <p class="font-body text-base md:text-lg text-gray-50">Get featured on Re:belay.<br><br>Writers, photographers, filmmakers who are passionate about canyoning: this is a space for you.</p>
       </div>
       <div class="flex-1">
         <div class="py-6">

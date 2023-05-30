@@ -1,0 +1,28 @@
+---
+layout: default
+title: Canyoning Stories - Re:belay canyoning
+description:
+keywords:
+---
+{% assign features = site.posts | where_exp: "feature", "feature.category == 'feature'" %}
+<div class="articles-slider">
+  {% for post in features %}
+  {% include components/article-card.html %}  
+  {% endfor %}
+</div>
+
+{% assign interviews = site.posts | where_exp: "interview", "interview.category == 'interview'" %}
+<div class="articles-slider">
+  {% for post in interviews %}
+  {% include components/article-card.html %}
+  {% endfor %}
+</div>
+
+{% assign photostories = site.posts | where_exp: "photostory", "photostory.category == 'photostory'" %}
+<div class="articles-slider">
+  {% for post in photostories %}
+  {% include components/article-card.html %}
+  {% endfor %}
+</div>
+
+<script src="/js/slider.js" defer></script>

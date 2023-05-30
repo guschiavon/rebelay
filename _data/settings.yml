@@ -23,7 +23,7 @@ navigation:
         - name:
           url:
     - name: Articles
-      url: /stories
+      url: /articles
       is_dropdown: false
       style_as_button: false
       submenus:

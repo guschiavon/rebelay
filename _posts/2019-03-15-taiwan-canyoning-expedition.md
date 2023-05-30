@@ -1,6 +1,7 @@
 ---
 layout: post
 content_type: article
+category: feature
 title: Taiwan Canyoning Expedition - Rebelay Canyoning
 display_title: The antics of the Taiwan Canyoning Expedition 
 description: The story behind opening one of the longest canyons in Taiwan, the epic Malishan River
@@ -11,7 +12,6 @@ feature_image: >-
 article_number: 1
 author: gus
 photos_by: Gus Schiavon
-category: feature
 paragraph_image: >-
   /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-18.jpg
 paragraph_image_alt_text: Canyoning topography for Taiwan Canyoning Expedition
