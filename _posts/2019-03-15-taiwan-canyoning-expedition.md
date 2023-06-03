@@ -5,62 +5,59 @@ category: feature
 title: Taiwan Canyoning Expedition - Rebelay Canyoning
 display_title: The antics of the Taiwan Canyoning Expedition 
 description: The story behind opening one of the longest canyons in Taiwan, the epic Malishan River
-_share_icons: true
 date: 2020-01-31 10:20:00
-feature_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg
-article_number: 1
+feature_image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg
 author: gus
 photos_by: Gus Schiavon
-paragraph_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-18.jpg
-paragraph_image_alt_text: Canyoning topography for Taiwan Canyoning Expedition
-grid_top_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-1.jpg
-grid_top_image_alt_text: Canyoning approach
-grid_bottom_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-2.jpg
-grid_bottom_image_alt_text: Traversing a narrow ridge while canyoning
-first_fullscreen_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-8.jpg
-first_fullscreen_image_alt_text: Waterfalls in Taiwan Canyoning Expedition
-inset_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-3.jpg
-inset_image_alt_text: >-
-  Akira Tanaka using canyoning expedition-style anchors for Taiwan Canyoning
-  Expedition
-hex_one_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-14.jpg
-hex_one_alt_text: Expedition canyoning in Taiwan
-hex_two_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-6.jpg
-hex_two_alt_text: Big waterfalls canyoning in Taiwan by Gus Schiavon
-hex_three_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-10.jpg
-hex_three_alt_text: Camping inside canyon by Gus Schiavon
-hex_four_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-17.jpg
-hex_four_alt_text: Jumping canyoning by Gus Schiavon
-hex_five_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg
-hex_five_alt_text: A gorge with rock fall in Taiwan
-hex_six_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-12.jpg
-hex_six_alt_text: A canyoneer descending a waterfall by Gus Schiavon
-second_fullscreen_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-7.jpg
-second_fullscreen_image_alt_text: Expedition canyoning descent in Taiwan - Gus Schiavon
-third_fullscreen_image: >-
-  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-4.jpg
-third_fullscreen_image_alt_text: Malishan Taiwan Canyoning Expedition - Gus Schiavon
-location: Taiwan
-duration: 8 days
-rating: V6A7VI
-adventure_rating: 5/5
-fun_rating: 4/5
-ambiance_rating: 5/5
-map_url: >-
-  https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1872929.571801383!2d120.02141077057854!3d23.53014394931876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1staiwan!5e0!3m2!1sen!2sid!4v1576733060213!5m2!1sen!2sid
+gallery:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-18.jpg
+    alt_text: Canyoning topography for Taiwan Canyoning Expedition
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-1.jpg
+    alt_text: Canyoning approach
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-2.jpg
+    alt_text:  Traversing a narrow ridge while canyoning
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-8.jpg
+    alt_text: Waterfalls in Taiwan Canyoning Expedition
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-3.jpg
+    alt_text: Akira Tanaka using canyoning expedition-style anchors for Taiwan Canyoning Expedition
+    caption:
+  - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-14.jpg
+    alt_text:
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-6.jpg
+    alt_text:
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-10.jpg
+    alt_text:
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-17.jpg
+    alt_text:
+    caption:
+  - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg
+    alt_text: A gorge with rock fall in Taiwan    
+    caption:
+  - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-12.jpg
+    alt_text:
+    caption:
+  - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-7.jpg
+    alt_text:
+    caption:
+  - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-4.jpg
+    alt_text:
+    caption: 
+canyon_beta:
+  location: Taiwan
+  duration: 8 days
+  rating: V6A7VI
+  adventure_rating: 5/5
+  fun_rating: 4/5
+  ambiance_rating: 5/5
+  map_url: >-
+    https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1872929.571801383!2d120.02141077057854!3d23.53014394931876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1staiwan!5e0!3m2!1sen!2sid!4v1576733060213!5m2!1sen!2sid
 page_blocks:
 ---
 

@@ -33,6 +33,9 @@ presets:
   article_feature:
     markup: picture
     widths: [750, 400]
+  gallery_image:
+    markup: picture
+    widths: [800, 600, 400]
   xlarge:
     markup: picture
     formats: webp
