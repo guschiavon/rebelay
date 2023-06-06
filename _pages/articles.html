@@ -4,13 +4,18 @@ title: Canyoning Stories - Re:belay canyoning
 description:
 keywords:
 ---
-<div class="px-4 md:px-0 md:container md:mx-auto">
-  <div id="search-container" class="flex-1">    
-    <input type="text" id="search-input" placeholder="Search..."
-      class="block p-2 text-xs md:text-base md:p-4 bg-gray-200 rounded-full w-full mb-6 ring-yellow-500">
+<div class="px-4 md:px-0 md:container md:mx-auto py-12 md:py-24">
+  <div class="pb-6 text-center">
+    <h1 class="section-heading">Canyoning Articles</h1>
+    <p class="section-paragraph">Browse through our content or use the search bar to look for specific authors or articles.</p>
   </div>
-  <ul id="results-container" class="flex flex-col gap-y-6">
-  </ul>
+  <div class="md:w-1/2 md:mx-auto pb-4 relative">
+    <div id="search-container" class="flex-1">    
+      <input type="text" id="search-input" placeholder="Search..." class="block p-2 text-xs md:text-sm md:p-2 bg-gray-200 rounded-full w-full ring-yellow-500">
+    </div>
+    <ul id="results-container" class="absolute left-1/2 transform -translate-x-1/2 bg-gray-100 flex flex-col gap-y-6 w-11/12 mx-auto rounded-lg shadow-md">
+    </ul>
+  </div>
   <div class="flex flex-col gap-y-6">
     {% for post in site.posts %}
     {% include components/archive-listing.html %}
@@ -19,26 +24,12 @@ keywords:
 </div>
 <script src="/js/slider.js" type="text/javascript" defer></script>
 <script src="/js/search.js" type="text/javascript"></script>
-<script>
+<script type="module">
+  import articlePreview from '/js/components/article-listing.component.js';
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    searchResultTemplate: `
-      <div class="archive-listing--container grid grid-cols-1 md:grid-cols-2 items-center justify-center">
-        <a href="{url}" class="archive-listing--img block col-span-1 overflow-hidden h-72 lg:h-96 md:flex-1">
-          <img src="{image}" class="object-cover w-full h-full">
-        </a>
-        <div class="col-span-1 -mt-10 md:-mt-0 flex flex-col gap-2 md:gap-4 p-5 bg-gray-100">      
-          <a href="{url}">
-            <h3 class="article-card--title text-gray-600">{displayTitle}</h3>
-          </a>
-          <a href="{url}">
-            <p class="article-card--description">{description}</p>
-          </a>
-          
-          <span class="article-card--author">By {author}</span>  
-        </div>
-      </div>`,
+    searchResultTemplate: articlePreview(),
     json: '/search-data.json'
   });    
 </script>

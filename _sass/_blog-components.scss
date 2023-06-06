@@ -9,10 +9,10 @@
   }
   
   &--title {
-    @apply  font-display text-lg md:text-2xl capitalize align-top;
+    @apply  font-display text-lg md:text-2xl capitalize align-top hover:text-yellow-500 transition-colors;
   }
   &--description {
-    @apply  text-xs md:text-sm py-2;
+    @apply  text-xs md:text-sm py-2 hover:text-gray-500 transition-colors;
   }
   &--image { 
     @apply h-64 w-full overflow-hidden;

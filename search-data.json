@@ -5,9 +5,10 @@
       "title"         : "{{ post.title | escape }}",
       "displayTitle"  : "{{ post.display_title }}",
       "url"           : "{{ site.baseurl }}{{ post.url }}",      
-      "postType"      : "{{ post.content_type }}",      
+      "postType"      : "{{ post.content_type }}",
+      "date"          : "{{ post.date | date_to_string }}",
       "category"      : "{{ post.category }}",
-      "author"        : "{{ post.price }}",
+      "author"        : {% assign author = site.data.authors[post.author] %}"{{ author.name }}",
       "image"         : "{{ post.feature_image }}",
       "description"   : "{{ post.description }}",
       "keywords"      : "{% for keyword in post.keywords %}{{keyword | append: ' '}}{% endfor %}"      
