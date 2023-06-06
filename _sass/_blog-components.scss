@@ -6,8 +6,13 @@
   &:last-of-type {
     @apply mr-6 lg:mr-0;
   }
-  .blog-info span {
-    @apply uppercase font-display font-extralight text-yellow-500 text-xs;
+  .blog-info {
+    span {
+      @apply uppercase font-display font-extralight text-yellow-500 text-xs;
+    }
+    .divide-dot span {
+      @apply text-3xl text-gray-700;
+    }
   }
   &--title {
     @apply  font-display text-lg md:text-2xl capitalize align-top;
@@ -41,7 +46,7 @@
   }
 }
 .article-content--image {
-  @apply block w-full h-56 md:h-96 lg:h-full mb-6 md:mb-3 p-4;
+  @apply block w-full h-56 md:h-96 lg:h-full mb-10 md:mb-12 lg:mb-6 p-4;
 }
 
 .article-content--image img {
@@ -49,5 +54,5 @@
 }
 
 .article-content--image caption {
-  @apply block w-full italic text-sm;
+  @apply block w-full italic text-tiny md:text-xs lg:text-sm leading-3 md:leading-4 lg:leading-5;
 }

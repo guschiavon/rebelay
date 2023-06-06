@@ -1,12 +1,12 @@
-<article itemscope itemtype="https://schema.org/Article" class="blog-card ">
+<article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
   <div class="blog-card--image">
   {% picture large "{{post.feature_image}}" --img alt="{{post.feature_image_alt_text}}" class="bg-image" %}
 </div>
   <div class="p-4 flex flex-col justify-between">
     <div class="blog-info">
       <span>{{post.category}}</span>
+      <span class="divide-dot">•</span>
       <span>{{post.date | date_to_string}}</span>
-
     </div>
     <a href="{{post.url}}" class="py-2">
       <h2 class="blog-card--title">{{ post.display_title }}</h2>

@@ -45,7 +45,7 @@ page_configuration:
     <p class="pb-4">Read the latest epic stories from descents around the world, curated by Re:belay</p>
     <hr class="mb-8">
   </div>
-  <div id="slider" class="articles-wrapper flex justify-between gap-y-6 gap-x-4 overflow-x-scroll" style="touch-action: auto;">
+  <div id="slider" class="articles-wrapper flex justify-between gap-y-6 gap-x-4 overflow-x-scroll py-2" style="touch-action: auto;">
     {% assign posts = site.posts | where_exp: "post", "post.category != 'interview' "%}
     {% for post in posts offset: 1 limit: 3 %}
     {% include components/article-card.html %}
@@ -53,10 +53,11 @@ page_configuration:
   </div>
   <div class="interviews py-8">
     {% assign interviews = site.posts | where_exp: "itw", "itw.category == 'interview'" %}
+    {% unless interviews.size == 0 %}
     {% assign interview = interviews[1] %}
     <div class="flex flex-col md:flex-row items-center">
       <div class="flex-1 flex-shrink-0">        
-        {% picture xlarge "{{interview.feature_image}}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img"%}                  
+        {% picture xlarge "{{interview.feature_image | default: '/assets/images/placeholder.jpg' }}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img"%}                  
       </div>
       <div class="interview-preview">
         <div class="interview-preview--content p-6">
@@ -70,6 +71,7 @@ page_configuration:
         </div>
       </div>
     </div>
+    {% endunless %}
   </div>
 </div>
 <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 md:px-10 lg:px-16 py-8 lg:py-16">

@@ -4,7 +4,7 @@ layout: default
 
 <main class="article-wrapper">
   <div class="container mx-auto md:px-16 py-8">
-    <article class="article md:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
+    <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
         <div class="article-feature-image">
           {% picture article_feature "{{page.feature_image}}" --img alt="{{page.feature_image_alt_text}}" class="responsive-img" %}          
@@ -38,7 +38,7 @@ layout: default
         {{content}}
       </section>
       {% elsif page.content_type == 'photostory' %}
-      <section>
+      <section class="article-content">
         <div class="gallery">
           {% assign images = page.gallery %}
           <div class=" flex flex-col gap-2">
@@ -59,7 +59,7 @@ layout: default
       </div>
       
     </article>
-    <aside class="md:w-3/5 bg-gray-300 rounded-md shadow-md p-4 md:p-6 mx-auto mt-8">
+    <aside class="md:w-5/6 lg:w-3/5 bg-gray-300 rounded-md shadow-md p-4 md:p-6 mx-auto mt-8">
       <span class="block font-display text-yellow-500 text-lg uppercase text-center md:text-left tracking-wide pb-4">About the author</span>
       <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2 md:gap-4">
         <div class="rounded-full flex-shrink-0 w-24 h-24 overflow-hidden">
@@ -77,6 +77,34 @@ layout: default
     </aside>
   </div>
 </main>
+<div class="article-gallery bg-gray-800 p-6">
+  <div class="container mx-auto">
+    <div class="py-4">
+      <h2 class="section-heading text-gray-50">Gallery</h2>
+      <p class="section-paragraph text-gray-100">Hover or click on the images to learn more</p>
+    </div>
+    {% assign gallery = page.gallery %}    
+    <div id="activeGallery" class="active-gallery">
+      <div class="active-gallery--img">
+        <picture>
+          <source id="activeSrcset" srcset='{% picture only_srcset "{{gallery[0].image}}"%}'>
+          <img id="activeImg" src='{% picture preview "{{gallery[0].image}}" %}' alt="{{gallery[0].alt_text}}" data-srcset="{% picture only_srcset "{{gallery[0].image}}"%}" class="object-cover h-full w-full" loading="lazy">
+        </picture>        
+         
+      </div>
+      <div class="active-gallery--caption col-span-1 p-6">
+        <p id="activeCaption" class="transition-transform text-gray-50 font-body font-light tracking-wider flex items-center">{{gallery[0].caption}}</p>
+      </div>
+    </div>
+    <div class="flex md:flex-row gap-2 flex-wrap py-2 justify-center">    
+      {% for img in gallery %}
+      <button class="h-24 w-24 md:h-32 md:w-32 overflow-hidden">
+        <img src="{{img.image}}" alt="{{img.alt_text}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 <div class="related-posts bg-yellow-500">
   <div class="container mx-auto text-center py-6">
     <h2 class="section-heading">Read more stories</h2>
@@ -88,11 +116,11 @@ layout: default
     </div>
 </div>
 <script>
-  const article = document.querySelector('.article-content');
+  const article = document.querySelector('.article-content');  
   const images = article.querySelectorAll('img');  
   images.forEach((img) => {
     let parent = img.parentNode;    
-    let wrapper = document.createElement('a');
+    let wrapper = document.createElement('div');
     let caption = document.createElement('caption');
     caption.innerText = img.getAttribute('alt');
     wrapper.classList.add('article-content--image');
@@ -100,10 +128,35 @@ layout: default
     parent.replaceChild(wrapper, img);
     // set element as child of wrapper
     wrapper.appendChild(img);
-    wrapper.appendChild(caption);
-    wrapper.setAttribute('href', img.dataset.url);
-    wrapper.setAttribute('target', '_blank');
+    wrapper.appendChild(caption);    
     img.setAttribute('loading', 'lazy');
+  });
+  function eventHandler(e,t) {
+    t.addEventListener(e, () => {
+      let imgSrc = t.src;      
+      if (t.naturalHeight > t.naturalWidth) {
+        activeImg.classList.remove('object-cover');
+        activeImg.classList.add('object-contain');
+      } else if (t.naturalHeight < t.naturalWidth) {
+        activeImg.classList.add('object-cover');
+        activeImg.classList.remove('object-contain');
+      }
+      activeImg.setAttribute('src', imgSrc);
+      activeSrcset.setAttribute('srcset', t.dataset.srcset);
+      activeCaption.innerHTML = t.dataset.caption;    
+    })  
+  }
+  window.addEventListener('DOMContentLoaded', () => {
+    const galleryImgs = document.querySelectorAll('.gallery-thumb');    
+    const activeImg = document.getElementById('activeImg');
+    const activeCaption = document.getElementById('activeCaption');    
+    const activeSrcset = document.getElementById('activeSrcset');
+    galleryImgs.forEach((img) => {   
+      
+      eventHandler('mouseover',img);
+      eventHandler('click',img);          
+    })
   })
+  
   </script>
   <script src="/js/slider.js" defer></script>

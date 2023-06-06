@@ -56,3 +56,21 @@
   }
 
 }
+.active-gallery {
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2;
+  &--img {
+    @apply col-span-1 md:col-span-2 lg:col-span-1 overflow-hidden;
+    height: 300px;
+    max-height: 500px;
+  }
+}
+@media (min-width: 768px) { 
+  .active-gallery--img {
+    height: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .active-gallery--img {
+    height: 500px;
+  }
+}

@@ -58,7 +58,13 @@ canyon_beta:
   ambiance_rating: 5/5
   map_url: >-
     https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1872929.571801383!2d120.02141077057854!3d23.53014394931876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1staiwan!5e0!3m2!1sen!2sid!4v1576733060213!5m2!1sen!2sid
-page_blocks:
+keywords:
+  - canyoning pnw
+  - canyoning west coast usa
+  - canyoning seattle
+  - canyoneering in seattle
+  - canyoning in washington
+  - canyoning in oregon
 ---
 
 "Rock!" I heard Andrew scream, and I turned to see a massive slab of schist, displaced by Andrew himself, bouncing off the wall. From my relatively safe spot, I watched Ryoji below narrowly dodge the main chunk, which hit the ground and exploded into numerous small shards that went spinning through the air. From his vantage point, Andrew asked if everyone was ok.
