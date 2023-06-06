@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Re:belay Canyoning
+description: 
 feature_image: 
 feature_image_alt_text: 
 feature_video:
@@ -8,7 +9,6 @@ feature_video:
   author: Jake Huddleston
   video_id: AVC6Iou0COk
   description: 'A visual journey through beautiful canyons around the world looking at answering the important question: why do we go canyoning?'
-description: 
 keywords: 
   - canyoneering blog
   - canyoneering blogs
@@ -51,9 +51,9 @@ page_configuration:
     {% include components/article-card.html %}
     {% endfor %}
   </div>
+  {% assign interviews = site.posts | where_exp: "itw", "itw.category == 'interview'" %}
+  {% unless interviews.size == 0 %}
   <div class="interviews py-8">
-    {% assign interviews = site.posts | where_exp: "itw", "itw.category == 'interview'" %}
-    {% unless interviews.size == 0 %}
     {% assign interview = interviews[0] %}
     <div class="flex flex-col md:flex-row items-center">
       <div class="flex-1 flex-shrink-0">        
@@ -71,8 +71,8 @@ page_configuration:
         </div>
       </div>
     </div>
-    {% endunless %}
   </div>
+  {% endunless %}
 </div>
 <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 md:px-10 lg:px-16 py-8 lg:py-16">
   <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat" style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">

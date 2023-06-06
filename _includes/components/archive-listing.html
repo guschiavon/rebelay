@@ -1,8 +1,8 @@
-<div class="archive-listing--container lg:w-3/5 lg:mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center">
-  <a href="{{post.url}}" class="archive-listing--img block col-span-1 overflow-hidden h-72 lg:h-80 md:flex-1">
-    {% picture xlarge "{{post.feature_image}}" --img class="object-cover w-full h-full" %}    
+<div class="archive-listing--container ">
+  <a href="{{post.url}}" class="archive-listing--img">
+    {% picture xlarge "{{post.feature_image}}" --img class="object-cover w-full h-full" loading="lazy" %}    
   </a>
-  <div class="col-span-1 -mt-10 md:-mt-0 flex flex-col gap-2 md:gap-4 p-5 bg-gray-100">
+  <div class="archive-listing--content">
     {% include components/post-category.html %}
     <a href="{{post.url}}">
       <h3 class="article-card--title text-gray-600">{{post.display_title}}</h3>

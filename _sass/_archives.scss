@@ -1,0 +1,9 @@
+.archive-listing--container {
+  @apply lg:w-3/5 lg:mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center;
+}
+.archive-listing--img {
+  @apply  block col-span-1 overflow-hidden h-72 lg:h-80 md:flex-1 rounded-lg;
+}
+.archive-listing--content {
+  @apply col-span-1 -mt-10 md:-mt-0 md:-ml-10 flex flex-col gap-2 md:gap-4 p-5 bg-gray-100 rounded-lg shadow-lg;
+}
