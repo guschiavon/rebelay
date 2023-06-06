@@ -1,0 +1,16 @@
+---
+---
+[ {% for post in site.posts %}
+    {
+      "title"         : "{{ post.title | escape }}",
+      "displayTitle"  : "{{ post.display_title }}",
+      "url"           : "{{ site.baseurl }}{{ post.url }}",      
+      "postType"      : "{{ post.content_type }}",      
+      "category"      : "{{ post.category }}",
+      "author"        : "{{ post.price }}",
+      "image"         : "{{ post.feature_image }}",
+      "description"   : "{{ post.description }}",
+      "keywords"      : "{% for keyword in post.keywords %}{{keyword | append: ' '}}{% endfor %}"      
+
+    } {% unless forloop.last %},{% endunless %}  {% endfor %}
+]
