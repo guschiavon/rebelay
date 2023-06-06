@@ -463,30 +463,41 @@ The descent of Asemanrood would allows us to develop the team dynamics and discu
     wrapper.appendChild(caption);    
     img.setAttribute('loading', 'lazy');
   });
+  function setActiveImg(t) {
+    let imgSrc = t.src;      
+    activeImg.setAttribute('src', imgSrc);
+    activeSrcset.setAttribute('srcset', t.dataset.srcset);
+    activeCaption.innerHTML = t.dataset.caption; 
+  }
+  function setOrientation(t) {
+    if (t.naturalHeight > t.naturalWidth) {
+      activeImg.classList.remove('object-cover');
+      activeImg.classList.add('object-contain');
+    } else if (t.naturalHeight < t.naturalWidth) {
+      activeImg.classList.add('object-cover');
+      activeImg.classList.remove('object-contain');
+    }
+  }
   function eventHandler(e,t) {
     t.addEventListener(e, () => {
-      let imgSrc = t.src;      
-      if (t.naturalHeight > t.naturalWidth) {
-        activeImg.classList.remove('object-cover');
-        activeImg.classList.add('object-contain');
-      } else if (t.naturalHeight < t.naturalWidth) {
-        activeImg.classList.add('object-cover');
-        activeImg.classList.remove('object-contain');
-      }
-      activeImg.setAttribute('src', imgSrc);
-      activeSrcset.setAttribute('srcset', t.dataset.srcset);
-      activeCaption.innerHTML = t.dataset.caption;    
+      setOrientation(t);    
+      setActiveImg(t);      
     })  
   }
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', () => {    
     const galleryImgs = document.querySelectorAll('.gallery-thumb');    
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
     const activeSrcset = document.getElementById('activeSrcset');
-    galleryImgs.forEach((img) => {   
-      
-      eventHandler('mouseover',img);
-      eventHandler('click',img);          
+    galleryImgs.forEach((img) => {
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === "Tab" && document.activeElement === img.parentElement) {
+          setOrientation(img);
+          setActiveImg(img);
+        }
+      })
+        eventHandler('mouseover', img);
+        eventHandler('click', img);                        
     })
   })
   
