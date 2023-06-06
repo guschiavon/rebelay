@@ -77,15 +77,16 @@ layout: default
     </aside>
   </div>
 </main>
-<div class="article-gallery bg-gray-800 p-6">
+
+<div class="article-gallery bg-gray-800 p-6 " style="background-image: url(/assets/images/textures/metal-texture-with-dust-scratches-cracks-textured-backgrounds.jpg); background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat;">
   <div class="container mx-auto">
     <div class="py-4">
       <h2 class="section-heading text-gray-50">Gallery</h2>
       <p class="section-paragraph text-gray-100">Hover or click on the images to learn more</p>
     </div>
     {% assign gallery = page.gallery %}    
-    <div id="activeGallery" class="active-gallery">
-      <div class="active-gallery--img">
+    <div id="activeGallery" class="active-gallery" >
+      <div class="active-gallery--img rounded-md overflow-hidden">
         <picture>
           <source id="activeSrcset" srcset='{% picture only_srcset "{{gallery[0].image}}"%}'>
           <img id="activeImg" src='{% picture preview "{{gallery[0].image}}" %}' alt="{{gallery[0].alt_text}}" data-srcset="{% picture only_srcset "{{gallery[0].image}}"%}" class="object-cover h-full w-full" loading="lazy">
@@ -93,19 +94,19 @@ layout: default
          
       </div>
       <div class="active-gallery--caption col-span-1 p-6">
-        <p id="activeCaption" class="transition-transform text-gray-50 font-body font-light tracking-wider flex items-center">{{gallery[0].caption}}</p>
+        <p id="activeCaption">{{gallery[0].caption}}</p>
       </div>
     </div>
     <div class="flex md:flex-row gap-2 flex-wrap py-2 justify-center">    
       {% for img in gallery %}
-      <button class="h-24 w-24 md:h-32 md:w-32 overflow-hidden">
+      <button class="h-24 w-24 md:h-32 md:w-32 rounded-md overflow-hidden">
         <img src="{{img.image}}" alt="{{img.alt_text}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
       </button>
       {% endfor %}
     </div>
   </div>
 </div>
-<div class="related-posts bg-yellow-500">
+<div class="related-posts bg-yellow-500 bg-left bg-contain bg-no-repeat" style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
   <div class="container mx-auto text-center py-6">
     <h2 class="section-heading">Read more stories</h2>
   </div>

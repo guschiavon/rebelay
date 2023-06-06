@@ -45,7 +45,7 @@ page_configuration:
     <p class="pb-4">Read the latest epic stories from descents around the world, curated by Re:belay</p>
     <hr class="mb-8">
   </div>
-  <div id="slider" class="articles-wrapper flex justify-between gap-y-6 gap-x-4 overflow-x-scroll py-2" style="touch-action: auto;">
+  <div id="slider" class="articles-wrapper" style="touch-action: auto;">
     {% assign posts = site.posts | where_exp: "post", "post.category != 'interview' "%}
     {% for post in posts offset: 1 limit: 3 %}
     {% include components/article-card.html %}
@@ -54,10 +54,10 @@ page_configuration:
   <div class="interviews py-8">
     {% assign interviews = site.posts | where_exp: "itw", "itw.category == 'interview'" %}
     {% unless interviews.size == 0 %}
-    {% assign interview = interviews[1] %}
+    {% assign interview = interviews[0] %}
     <div class="flex flex-col md:flex-row items-center">
       <div class="flex-1 flex-shrink-0">        
-        {% picture xlarge "{{interview.feature_image | default: '/assets/images/placeholder.jpg' }}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img"%}                  
+        {% picture xlarge "{{interview.feature_image }}" --img alt="{{interview.feature_image_alt_text}}" class="responsive-img"%}                  
       </div>
       <div class="interview-preview">
         <div class="interview-preview--content p-6">
@@ -75,7 +75,7 @@ page_configuration:
   </div>
 </div>
 <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 md:px-10 lg:px-16 py-8 lg:py-16">
-  <div class="bg-yellow-400 p-10 flex flex-col md:flex-row">
+  <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat" style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
     <div class="flex-1 pb-5 lg:pb-0">
       <h2 class="section-heading text-gray-100">Never miss a story</h2>
       <p class="section-paragraph">Sign up to our newsletter and get notified about the latest canyoning articles</p>

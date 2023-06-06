@@ -1,9 +1,9 @@
-  const slider = document.getElementById('slider');
+  const sliders = document.querySelectorAll('.slider');
   let isDown = false;
   let startX;
   let scrollLeft;
   let scrollRight;
-
+sliders.forEach((slider) => {
   slider.addEventListener('mousedown', (e) => {
     isDown = true;
     slider.classList.add('active');
@@ -22,6 +22,7 @@
     e.preventDefault();
     const x = e.pageX - slider.offsetLeft;
     const walk = x - startX;
-    slider.scrollLeft = scrollLeft - walk;
-    console.log({x, startX});
+    slider.scrollLeft = scrollLeft - walk;    
   })
+
+})
