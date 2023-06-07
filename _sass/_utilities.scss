@@ -84,15 +84,3 @@
   @apply text-gray-50 bg-transparent;
 }
 
-.archive-listing--result {
-  .article-card {
-    &--title {
-      @apply text-base md:text-xl;
-    }
-    &--description,
-    &--author {
-      @apply text-tiny md:text-xs;
-    }
-    
-  }
-}
