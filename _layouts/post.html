@@ -99,7 +99,7 @@ layout: default
     </div>
     <div class="flex md:flex-row gap-2 flex-wrap py-2 justify-center">    
       {% for img in gallery %}
-      <button class="h-24 w-24 md:h-32 md:w-32 rounded-md overflow-hidden">
+      <button class="h-24 w-24 rounded-md overflow-hidden">
         <img src="{{img.image}}" alt="{{img.alt_text}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
       </button>
       {% endfor %}

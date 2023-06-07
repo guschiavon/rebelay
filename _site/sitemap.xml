@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://0.0.0.0:4000/about</loc>
-<lastmod>2023-05-29T21:57:10-03:00</lastmod>
+<lastmod>2023-06-06T23:15:51-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/articles</loc>
@@ -18,7 +18,7 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/01/taiwan-canyoning-expedition</loc>
-<lastmod>2023-06-05T22:09:36-03:00</lastmod>
+<lastmod>2023-06-06T22:45:28-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/02/bali</loc>
@@ -26,15 +26,15 @@
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/04/iran</loc>
-<lastmod>2023-06-05T22:09:36-03:00</lastmod>
+<lastmod>2023-06-06T23:06:13-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/2020/04/pnw</loc>
-<lastmod>2023-06-05T22:09:36-03:00</lastmod>
+<lastmod>2023-06-06T22:57:13-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/</loc>
-<lastmod>2023-06-06T15:54:58-03:00</lastmod>
+<lastmod>2023-06-06T23:15:51-03:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/admin/</loc>
