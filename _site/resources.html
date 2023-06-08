@@ -92,22 +92,33 @@
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
-          right: 'dayGridMonth,listYear'
+          right: 'listMonth,listYear'
+        },
+        buttonText: {
+          today: 'today',
+          month: 'month',
+          week: 'week',
+          day: 'day',
+          year: 'year'
         },
 
-        displayEventTime: false, // don't show the time column in list view
-        googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',
+        initialView: 'listMonth',
+        googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',        
+        eventSources: [
+          {
+            googleCalendarId: 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com'
+          },
+        ] 
 
-        // US Holidays
-        events: 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com',        
-
-      });
-
+      });     
+      let events = calendar.getEvents();
+      console.log(events);
       calendar.render();
     });
 </script>  
-  
-<div id='calendar'></div>
+  <div class="container mx-auto lg:w-3/5">
+    <div id='calendar'></div>
+  </div>
 
 
   </div>
