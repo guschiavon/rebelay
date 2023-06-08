@@ -82,41 +82,31 @@
   </button> -->
 </div>
   <div class="flex-1">
-      <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script> -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const calendarId = 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com';
-        const calendarEl = document.getElementById('calendar');        
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-                    
-          
-          initialView: 'listWeek',
-          displayEventTime: false,
-          googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',
-          events: {
-            googleCalendarId: calendarId,
-          },
-          validRange: {
-            start: new Date(),
-          }
-        });
-        calendar.setOption('locale', 'pt-br');
-        calendar.render();
-      });
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   var calendarEl = document.getElementById('calendar');
-    //   let calendar = new FullCalendar(calendarEl, {
-    //     plugins: [googleCalendarPlugin],
-    //     googleCalendarApiKey: '<YOUR API KEY>',
-    //     events: {
-    //       googleCalendarId: 'abcd1234@group.calendar.google.com'
-    //     }
-    //   });
-    //   calendar.render();
-    // });
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
 
-  </script>
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,listYear'
+        },
+
+        displayEventTime: false, // don't show the time column in list view
+        googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',
+
+        // US Holidays
+        events: 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com',        
+
+      });
+
+      calendar.render();
+    });
+</script>  
+  
 <div id='calendar'></div>
 
 
