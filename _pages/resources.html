@@ -74,8 +74,10 @@ keywords:
           let eventElement = info.el;
           // JSON data from the 'description' field on Google Calendar
           let description = info.event.extendedProps.description;
+          console.log(description);
           // parse the JSON object
           var extendedProps = JSON.parse(description);
+          console.log(extendedProps);
 
           // Access the custom data within extendedProps
           let url = extendedProps.url;
