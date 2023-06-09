@@ -20,7 +20,7 @@
 <meta name="twitter:creator" content="{{site.data.settings.site_info.twitter_handle}}">
 <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="{% if page.keywords %} {{page.keywords}} {% else %} {% for keyword in site.data.settings.seo.keywords %} {{ keyword }} {% endfor %} {% endif %}">
+<meta name="keywords" content="{% if page.keywords %}{% for keyword in page.keywords %}{{keyword}} {% endfor %}{% else %} {% for keyword in site.data.settings.seo.keywords %} {{ keyword }} {% endfor %} {% endif %}">
 <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }} {% else %} {{ site.data.settings.seo.site_description_text | truncate: 160  }} {% endif %}" />
 
 <link rel="canonical" href="{{site.data.settings.site_info.site_url}}{{page.url}}">
