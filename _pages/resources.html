@@ -25,7 +25,9 @@ keywords:
           year: 'year',
           multiMonthYear: 'year'
         },
-
+        eventRender: function (event, element) {
+          element.description = event.description;
+        },
         initialView: 'dayGridMonth',
         googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',        
         eventSources: [
