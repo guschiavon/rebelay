@@ -131,3 +131,45 @@ keywords:
     </div>
   </div>
 
+
+  <script>
+    // Function to fetch events from Google Calendar
+      async function fetchEventsFromGoogleCalendar(calendarId) {
+        try {
+          const response = await fetch(
+            `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${CAL_API}`
+          );
+
+          if (!response.ok) {
+            throw new Error('Failed to fetch events from Google Calendar');
+          }
+
+          const data = await response.json();
+          const events = data.items.map((event) => ({
+            summary: event.summary,
+            url: event.htmlLink,
+            location: event.location,
+            organizer: event.organizer.displayName,
+          }));
+
+          return events;
+        } catch (error) {
+          console.error(error);
+          return [];
+        }
+      }
+
+      // Usage example
+      const calendarId = 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com';
+      const apiKey = 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A';
+
+      fetchEventsFromGoogleCalendar(calendarId)
+        .then((events) => {
+          console.log(events);
+          // Use the events data as needed
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
+  </script>
