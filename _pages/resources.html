@@ -70,8 +70,10 @@ keywords:
           }
         ],
         eventDidMount: function (info) {
+          console.log(event);
           // Display event information on the event element
           let eventElement = info.el;
+          console.log(eventElement);
           // JSON data from the 'description' field on Google Calendar
           let description = info.event.extendedProps.description;          
           // parse the JSON object
@@ -80,6 +82,7 @@ keywords:
 
           // Access the custom data within extendedProps
           let url = extendedProps.url;
+          event.setProp()
           let summary = extendedProps.summary;
           let organizer = extendedProps.organizer;
 
@@ -93,9 +96,10 @@ keywords:
           
           eventElement.appendChild(locationElement);
           eventElement.appendChild(descriptionElement);
-
+          eventElement.href = url;
           // Redirect to a dynamic URL on event click
           eventElement.addEventListener('click', function () {
+            event.preventDefault();
             window.open(url, '_blank');
           });
         }
