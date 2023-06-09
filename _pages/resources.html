@@ -4,6 +4,35 @@ title: Canyoning Resources and Training - Re:belay Canyoning
 description:
 keywords:
 ---
+<style>
+  .fc-event {
+    position: relative;
+  }
+
+  .fc-event .fc-title,
+  .fc-event .fc-location,
+  .fc-event .fc-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 2px;
+    background-color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .fc-event .fc-location {
+    top: 20px;
+  }
+
+  .fc-event .fc-description {
+    top: 40px;
+  }
+</style>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
 <script>
@@ -41,10 +70,28 @@ keywords:
           }
         ],
         eventDidMount: function (info) {
-          // Add event description as a tooltip
-          if (info.event.extendedProps.description) {
-            info.el.setAttribute('description', info.event.extendedProps.description);
-          }
+          // Display event information on the event element
+          var eventElement = info.el;
+          var titleElement = document.createElement('div');
+          titleElement.className = 'fc-title';
+          titleElement.innerHTML = info.event.title;
+
+          var locationElement = document.createElement('div');
+          locationElement.className = 'fc-location';
+          locationElement.innerHTML = info.event.extendedProps.location;
+
+          var descriptionElement = document.createElement('div');
+          descriptionElement.className = 'fc-description';
+          descriptionElement.innerHTML = info.event.extendedProps.description;
+
+          eventElement.appendChild(titleElement);
+          eventElement.appendChild(locationElement);
+          eventElement.appendChild(descriptionElement);
+
+          // Redirect to a dynamic URL on event click
+          eventElement.addEventListener('click', function () {
+            window.location.href = info.event.extendedProps.dynamicUrl;
+          });
         }
 
       });           
