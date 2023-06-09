@@ -99,17 +99,25 @@
 <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 py-8 lg:px-0 lg:py-16 lg:w-3/5">
   <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat"
     style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
-    <div class="flex-1 pb-5 lg:pb-0">
+    <div class="pb-5 lg:pb-0">
       <h2 class="section-heading text-gray-100">Did we miss your event?</h2>
       <p class="section-paragraph">Send us a message and we'll get it featured here.</p>
     </div>
-    <div class="newsletter-form flex-1">
-      <form action="alert('Success')" method="post" class="flex flex-col gap-2">
-        <input type="email" name="email" placeholder="Your Email" class="newsletter-input--email">
-        <input type="text" name="name" placeholder="Your Name" class="newsletter-input--email">
-        <textarea name="message" id="message" cols="30" rows="5" placeholder="Please add information about your event, including start and end dates, location, description, and a link to the event page" class="p-4"></textarea>
-        <input type="submit" value="I want to add my event" class="form-btn">
-      </form>
+    <div class="newsletter-form flex-grow">
+      <form id="contact-form" action="alert('Success')" method="post" class="contact-form">
+        <input type="email" placeholder="Email" class="form-input" required>
+        <input type="name" placeholder="Name" class="form-input" required>
+        <select name="subject" id="subject" class="form-input">
+          <option value="" disabled selected>Re:</option>
+          <option value="events">I want to promote an event</option>
+          <option value="business">I want to promote my courses</option>
+        </select>
+        <textarea name="message" id="" rows="7" class="form-input" placeholder="Please add information about your event, including start and end dates, location, description, and a link to the event page" required></textarea>
+        <input type="submit" value="Send my request" class="form-btn">
+        <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
+        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+        <input type="hidden" name="inbox_key" value="rebelay-mail">
+      </form>      
     </div>
   </div>
 </section>
