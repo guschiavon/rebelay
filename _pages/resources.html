@@ -141,6 +141,7 @@ keywords:
           }
 
           const data = await response.json();
+          console.log(data);
           const events = data.items.map((event) => ({
             summary: event.summary,
             url: event.htmlLink,
