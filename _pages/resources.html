@@ -103,7 +103,7 @@ keywords:
           eventInstance.href = url;
           // Redirect to a dynamic URL on event click
           eventInstance.addEventListener('click', function () {        
-            eventInfo.innerHTML = '';
+            eventEl.innerHTML = '';
             event.preventDefault();
             eventEl.appendChild(titleEl);
             eventEl.appendChild(locationEl);
