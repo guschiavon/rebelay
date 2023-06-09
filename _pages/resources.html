@@ -80,14 +80,14 @@ keywords:
 
           var descriptionElement = document.createElement('div');
           descriptionElement.className = 'fc-description';
-          descriptionElement.innerHTML = info.event.extendedProps.description;
+          descriptionElement.innerHTML = info.event.extendedProps.description.description;
           
           eventElement.appendChild(locationElement);
           eventElement.appendChild(descriptionElement);
 
           // Redirect to a dynamic URL on event click
           eventElement.addEventListener('click', function () {
-            window.location.href = info.event.extendedProps.url;
+            window.location.href = info.event.extendedProps.description.url;
           });
         }
 
