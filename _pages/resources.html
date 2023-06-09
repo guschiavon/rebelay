@@ -38,11 +38,7 @@ keywords:
 <script>
   document.addEventListener('DOMContentLoaded', function () {
       const calendarEl = document.getElementById('calendar');
-      const eventTitle = document.getElementById('event-title');
-      const eventLocation = document.getElementById('event-location');
-      const eventOrganizer = document.getElementById('event-organizer');
-      const eventSummary = document.getElementById('event-description');
-      const eventCta = document.getElementById('event-cta');
+      const eventEl = document.getElementById('event');
       const calendar = new FullCalendar.Calendar(calendarEl, {
         headerToolbar: {
           left: 'prev,next today',
@@ -86,10 +82,13 @@ keywords:
           let url = extendedProps.url;          
           let summary = extendedProps.summary;
           let organizer = extendedProps.organizer;
+          let title = info.event.title;
 
+          // Create DOM elements
+          let titleEl = document.createElement('h3');
+          titleEl.innerText = title;
           let locationEl = document.createElement('span');          
           locationEl.innerHTML = info.event.extendedProps.location;
-
           let summaryEl = document.createElement('p');          
           summaryEl.innerHTML = summary;
 
@@ -105,10 +104,11 @@ keywords:
           // Redirect to a dynamic URL on event click
           eventInstance.addEventListener('click', function () {        
             event.preventDefault();
-            eventTitle.innerText = info.event.title;
-            eventLocation.appendChild(locationEl);
-            eventSummary.appendChild(summaryEl);
-            eventCta.appendChild(ctaEl);
+            eventInfo.innerHTML = '';
+            eventEl.appendChild(titleEl);
+            eventEl.appendChild(locationEl);
+            eventEl.appendChild(summaryEl);
+            eventEl.appendChild(ctaEl);
             // window.open(url, '_blank');
           });
         }
@@ -120,12 +120,8 @@ keywords:
     <div id='calendar' class="col-span-1 p-6"></div>
     <div id='events' class="col-span-1 p-6">
       <h2 class="section-heading text-yellow-500">Events</h2>
-      <div class="flex flex-col gap-2 p-6 border-2 rounded-md border-gray-500">
-        <h3 id="event-title"></h3>
-        <div id="event-description" class="event-description"></div>
-        <div id="event-location" class="event-location"></div>
-        <div id="event-organizer"></div>
-        <div id="event-cta" class="event-cta"></div>
+      <div id="event" class="flex flex-col gap-2 p-6 border-2 rounded-md border-gray-500">
+        
         <span class="text-tiny">Opens in a new tab</span>
       </div>
     </div>
