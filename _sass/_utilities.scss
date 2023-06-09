@@ -38,7 +38,9 @@
     @apply absolute bg-gray-300 flex flex-col opacity-0 transition-opacity py-2 rounded w-full;
   }
 }
-
+.h-captcha {
+  @apply mx-auto;
+}
 .contact-form {
   @apply flex flex-col gap-y-4;
   .form-btn,

@@ -81,9 +81,11 @@ page_configuration:
       <p class="section-paragraph">Sign up to our newsletter and get notified about the latest canyoning articles</p>
     </div>
     <div class="newsletter-form flex-1">
-      <form action="alert('Success')" method="post" class="flex flex-col gap-2">        
+      <form action="" method="post" class="flex flex-col gap-2">
         <input type="email" name="email" placeholder="Your Email" class="newsletter-input--email">
         <input type="submit" value="Sign Up" class="form-btn">
+        <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
+        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
       </form>
     </div>
   </div>
@@ -124,3 +126,4 @@ page_configuration:
   }
 </script>
 <script src="/js/slider.js" defer></script>
+<script src="/js/form-ajax.js" type="text/javascript"></script>
