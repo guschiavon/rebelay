@@ -1,9 +1,6 @@
 const articlePreview = () => {
   return `  
-      <div class="archive-listing--result">
-        <a href="{url}" class="block overflow-hidden h-32">
-          <img src="{image}" class="object-cover w-full h-full">
-        </a>
+      <div class="archive-listing--result">        
         <div class="flex flex-col gap-1 p-2">      
           <div class="post-category">
             <span>{category}</span>
