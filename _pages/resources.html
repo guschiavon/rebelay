@@ -72,10 +72,8 @@ keywords:
         eventDidMount: function (info) {
           // Display event information on the event element
           var eventElement = info.el;
-          var titleElement = document.createElement('div');
-          titleElement.className = 'fc-title';
-          titleElement.innerHTML = info.event.title;
-
+          console.log(eventElement);          
+          console.log(info.event.extendedProps);
           var locationElement = document.createElement('div');
           locationElement.className = 'fc-location';
           locationElement.innerHTML = info.event.extendedProps.location;
@@ -83,14 +81,13 @@ keywords:
           var descriptionElement = document.createElement('div');
           descriptionElement.className = 'fc-description';
           descriptionElement.innerHTML = info.event.extendedProps.description;
-
-          eventElement.appendChild(titleElement);
+          
           eventElement.appendChild(locationElement);
           eventElement.appendChild(descriptionElement);
 
           // Redirect to a dynamic URL on event click
           eventElement.addEventListener('click', function () {
-            window.location.href = info.event.extendedProps.dynamicUrl;
+            window.location.href = info.event.extendedProps.url;
           });
         }
 
