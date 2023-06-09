@@ -71,23 +71,31 @@ keywords:
         ],
         eventDidMount: function (info) {
           // Display event information on the event element
-          var eventElement = info.el;
-          console.log(eventElement);          
-          console.log(info.event.extendedProps);
-          var locationElement = document.createElement('div');
+          let eventElement = info.el;
+          // JSON data from the 'description' field on Google Calendar
+          let description = info.event.extendedProps.description;
+          // parse the JSON object
+          var extendedProps = JSON.parse(description);
+
+          // Access the custom data within extendedProps
+          let url = extendedProps.url;
+          let summary = extendedProps.description;
+          let organizer = extendedProps.organizer;
+
+          let locationElement = document.createElement('div');
           locationElement.className = 'fc-location';
           locationElement.innerHTML = info.event.extendedProps.location;
 
-          var descriptionElement = document.createElement('div');
+          let descriptionElement = document.createElement('div');
           descriptionElement.className = 'fc-description';
-          descriptionElement.innerHTML = info.event.extendedProps.description.description;
+          descriptionElement.innerHTML = description;
           
           eventElement.appendChild(locationElement);
           eventElement.appendChild(descriptionElement);
 
           // Redirect to a dynamic URL on event click
           eventElement.addEventListener('click', function () {
-            window.location.href = info.event.extendedProps.description.url;
+            window.open(url, '_blank');
           });
         }
 
