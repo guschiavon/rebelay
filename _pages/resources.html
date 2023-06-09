@@ -73,10 +73,9 @@ keywords:
           // Display event information on the event element
           let eventElement = info.el;
           // JSON data from the 'description' field on Google Calendar
-          let description = info.event.extendedProps.description;
-          console.log(description);
+          let description = info.event.extendedProps.description;          
           // parse the JSON object
-          var extendedProps = JSON.parse(description);
+          let extendedProps = JSON.parse(description);
           console.log(extendedProps);
 
           // Access the custom data within extendedProps
@@ -90,7 +89,7 @@ keywords:
 
           let descriptionElement = document.createElement('div');
           descriptionElement.className = 'fc-description';
-          descriptionElement.innerHTML = description;
+          descriptionElement.innerHTML = summary + organizer;
           
           eventElement.appendChild(locationElement);
           eventElement.appendChild(descriptionElement);
