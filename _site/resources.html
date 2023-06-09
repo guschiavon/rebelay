@@ -83,7 +83,6 @@
 </div>
   <div class="flex-1">
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/list@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -102,15 +101,12 @@
           day: 'day',
           year: 'year',
           multiMonthYear: 'year'
-        },
-        eventRender: function (event, element) {
-          element.description = event.description;
-        },
+        },        
         initialView: 'dayGridMonth',
         googleCalendarApiKey: 'AIzaSyB99XNLOAsQIHFwo4wFZ0H0jgGxEDSsr1A',        
         eventSources: [
           {
-            googleCalendarId: 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com'
+            googleCalendarId: 'fc427b23f3a37346f0c88019e57abc1ece390381480bbd6a976b6392c0383805@group.calendar.google.com',
           },
           {
             googleCalendarId: 'f32a825d1e896ae19a0478fed6ab8483b1906bfd6ec30a8364f6a311fee61148@group.calendar.google.com'
@@ -121,7 +117,13 @@
             color: 'red',    
             textColor: 'white'
           }
-        ] 
+        ],
+        eventDidMount: function (info) {
+          // Add event description as a tooltip
+          if (info.event.extendedProps.description) {
+            info.el.setAttribute('description', info.event.extendedProps.description);
+          }
+        }
 
       });           
       calendar.render();
