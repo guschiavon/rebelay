@@ -82,7 +82,7 @@
   </button> -->
 </div>
   <div class="flex-1">
-    <style>
+    <!-- <style>
   .fc-event {
     position: relative;
   }
@@ -90,7 +90,7 @@
   .fc-event .fc-title,
   .fc-event .fc-location,
   .fc-event .fc-description {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -110,14 +110,14 @@
   .fc-event .fc-description {
     top: 40px;
   }
-</style>
+</style> -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-      var calendarEl = document.getElementById('calendar');
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
+      const calendarEl = document.getElementById('calendar');
+      const eventEl = document.getElementById('event');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
@@ -147,37 +147,56 @@
             textColor: 'white'
           }
         ],
-        eventDidMount: function (info) {
+        eventDidMount: function (info) {          
           // Display event information on the event element
-          var eventElement = info.el;
-          var titleElement = document.createElement('div');
-          titleElement.className = 'fc-title';
-          titleElement.innerHTML = info.event.title;
+          let eventInstance = info.el;          
+          // JSON data from the 'description' field on Google Calendar
+          let eventInfo = info.event.extendedProps.description;          
+          // parse the JSON object
+          let extendedProps = JSON.parse(eventInfo);
+          console.log(extendedProps);
 
-          var locationElement = document.createElement('div');
-          locationElement.className = 'fc-location';
-          locationElement.innerHTML = info.event.extendedProps.location;
+          // Access the custom data within extendedProps
+          let url = extendedProps.url;          
+          let summary = extendedProps.summary;
+          let organizer = extendedProps.organizer;
 
-          var descriptionElement = document.createElement('div');
-          descriptionElement.className = 'fc-description';
-          descriptionElement.innerHTML = info.event.extendedProps.description;
+          let locationEl = document.createElement('span');          
+          locationEl.innerHTML = info.event.extendedProps.location;
 
-          eventElement.appendChild(titleElement);
-          eventElement.appendChild(locationElement);
-          eventElement.appendChild(descriptionElement);
+          let summaryEl = document.createElement('p');          
+          summaryEl.innerHTML = summary;
 
+          let ctaEl = document.createElement('a');
+          ctaEl.classList.add('event-cta--btn');
+          ctaEl.innerHTML = 'learn more';
+          ctaEl.setAttribute('aria-label',`Click to learn more about event called ${event.title}`);
+          ctaEl.href = url;
+          
+          eventEl.appendChild(locationEl);
+          eventEl.appendChild(summaryEl);
+          eventElement.href = url;
           // Redirect to a dynamic URL on event click
-          eventElement.addEventListener('click', function () {
-            window.location.href = info.event.extendedProps.dynamicUrl;
+          eventElement.addEventListener('click', function () {        
+            event.preventDefault();
+            window.open(url, '_blank');
           });
         }
-
       });           
       calendar.render();
     });
 </script>  
-  <div class="container mx-auto lg:w-3/5">
-    <div id='calendar'></div>
+  <div class="container mx-auto lg:w-3/5 grid grid-cols-2">
+    <div id='calendar' class="col-span-1"></div>
+    <div id='event' class="col-span-1 flex flex-col gap-2 p-6">
+      <div class="event-description">
+
+      </div>
+      <div class="event-location">
+
+      </div>
+      <div class="event-cta"></div>
+    </div>
   </div>
 
 

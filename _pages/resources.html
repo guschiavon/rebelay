@@ -4,7 +4,7 @@ title: Canyoning Resources and Training - Re:belay Canyoning
 description:
 keywords:
 ---
-<style>
+<!-- <style>
   .fc-event {
     position: relative;
   }
@@ -32,14 +32,18 @@ keywords:
   .fc-event .fc-description {
     top: 40px;
   }
-</style>
+</style> -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar@6.1.8/index.global.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-      var calendarEl = document.getElementById('calendar');
-
-      var calendar = new FullCalendar.Calendar(calendarEl, {
+      const calendarEl = document.getElementById('calendar');
+      const eventTitle = document.getElementById('event-title');
+      const eventLocation = document.getElementById('event-location');
+      const eventOrganizer = document.getElementById('event-organizer');
+      const eventSummary = document.getElementById('event-description');
+      const eventCta = document.getElementById('event-cta');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
         headerToolbar: {
           left: 'prev,next today',
           center: 'title',
@@ -69,46 +73,58 @@ keywords:
             textColor: 'white'
           }
         ],
-        eventDidMount: function (info) {
-          console.log(info);
+        eventDidMount: function (info) {          
           // Display event information on the event element
-          let eventElement = info.el;
-          console.log(eventElement);
+          let eventInstance = info.el;          
           // JSON data from the 'description' field on Google Calendar
-          let description = info.event.extendedProps.description;          
+          let eventInfo = info.event.extendedProps.description;          
           // parse the JSON object
-          let extendedProps = JSON.parse(description);
+          let extendedProps = JSON.parse(eventInfo);
           console.log(extendedProps);
 
           // Access the custom data within extendedProps
-          let url = extendedProps.url;
-          // info.setProp('url',url)          
+          let url = extendedProps.url;          
           let summary = extendedProps.summary;
           let organizer = extendedProps.organizer;
 
-          let locationElement = document.createElement('div');
-          locationElement.className = 'fc-location';
-          locationElement.innerHTML = info.event.extendedProps.location;
+          let locationEl = document.createElement('span');          
+          locationEl.innerHTML = info.event.extendedProps.location;
 
-          let descriptionElement = document.createElement('div');
-          descriptionElement.className = 'fc-description';
-          descriptionElement.innerHTML = summary + organizer;
+          let summaryEl = document.createElement('p');          
+          summaryEl.innerHTML = summary;
+
+          let ctaEl = document.createElement('a');
+          ctaEl.classList.add('event-cta--btn');
+          ctaEl.innerText = 'learn more';
+          ctaEl.setAttribute('aria-label',`Click to learn more about event called ${event.title}`);
+          ctaEl.href = url;
           
-          eventElement.appendChild(locationElement);
-          eventElement.appendChild(descriptionElement);
+          // eventEl.appendChild(locationEl);
+          // eventEl.appendChild(summaryEl);
           eventElement.href = url;
           // Redirect to a dynamic URL on event click
-          eventElement.addEventListener('click', function () {
-            // event.preventDefault();
-            window.open(url, '_blank');
+          eventElement.addEventListener('click', function () {        
+            event.preventDefault();
+            eventTitle.innerText = info.event.title;
+            eventLocation.appendChild(locationEl);
+            eventSummary.appendChild(summaryEl);
+            eventCta.appendChild(ctaEl);
+            // window.open(url, '_blank');
           });
         }
-
       });           
       calendar.render();
     });
 </script>  
-  <div class="container mx-auto lg:w-3/5">
-    <div id='calendar'></div>
+  <div class="container mx-auto lg:w-3/5 grid grid-cols-2">
+    <div id='calendar' class="col-span-1"></div>
+    <div id='event' class="col-span-1 flex flex-col gap-2 p-6 border-2 rounded-md border-gray-500">
+      <h2 id="event-title"></h2>
+      <div id="event-description" class="event-description"></div>
+      <div id="event-location" class="event-location"></div>
+      <div id="event-organizer"></div>
+      <div id="event-cta" class="event-cta"></div>
+      <span class="text-tiny">Opens in a new tab</span>
+    </div>
   </div>
 
