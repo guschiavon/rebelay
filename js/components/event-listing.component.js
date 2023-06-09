@@ -1,14 +1,7 @@
-const createEventInstance = (event) => {
-  const eventsEl = document.getElementById('events');
+const eventListing = (type,url,title,startDate,endDate,location,summary,addToCal) => {
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  let { startDate, endDate, type, title, summary, url, location, organizer, addToCal } = event;                               
-  let eventInstance = document.createElement('div');
-  eventInstance.setAttribute('id', event.id);
-  eventInstance.classList.add('event-instance');
-  eventInstance.classList.add('bg-gray-100');
-  eventInstance.innerHTML = `
-    <div class="flex flex-col gap-1 ${type.toLowerCase().split(' ').join('-')}">                                                    
-    <div class="">
+  return `
+        <div class="flex flex-col gap-1 ${type.toLowerCase().split(' ').join('-')}">                                                        
       <div class="flex flex-col gap-1">
         <span class="event-instance--category">${type}</span>
         <a href=${url} target="_blank" arial-label="link opens new tab for event named ${title}"><h3 class="event-instance--title">${title}</h3></a>
@@ -28,8 +21,7 @@ const createEventInstance = (event) => {
       <a href="${addToCal}" class="inline-block font-display text-tiny font-light uppercase tracking-wider border-2 px-2 py-1" target="_blank">Add to calendar</a>
       </div>
     </div>
-  `;
-  return eventsEl.appendChild(eventInstance);
+  `;  
 }
 
-        export default createEventInstance;
+export default eventListing;
