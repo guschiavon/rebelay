@@ -11,25 +11,25 @@ module.exports = {
       "./js/components/*.component.js",
     ],
     safelist: [
-      'event-instance',
-      'event-instance--title',
-      'event-instance--summary',
-      'event-instance--details',
-      'events-wrapper--category',
-      'canyoning-meetings',
-      'workshops-and-training-courses',
-      'event-instance--category'
+      '.event-instance',
+      '.event-instance--title',
+      '.event-instance--summary',
+      '.event-instance--details',
+      '.events-wrapper--category',
+      '.canyoning-meetings',
+      '.workshops-and-training-courses',
+      '.event-instance--category'
     ],
     options: {
       safelist: [
-        'event-instance',
-        'event-instance--title',
-        'event-instance--summary',
-        'event-instance--details',
-        'events-wrapper--category',
-        'canyoning-meetings',
-        'workshops-and-training-courses',
-        'event-instance--category'
+        '.event-instance',
+        '.event-instance--title',
+        '.event-instance--summary',
+        '.event-instance--details',
+        '.events-wrapper--category',
+        '.canyoning-meetings',
+        '.workshops-and-training-courses',
+        '.event-instance--category'
       ],      
     },
   },

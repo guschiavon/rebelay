@@ -1,35 +1,37 @@
-.events-wrapper {
-  @apply flex flex-col md:flex-row md:flex-wrap gap-2;
-}
-.event-instance {
-  flex-basis: 100%;
-  @apply p-2 md:p-4 border-2 rounded-md;
-  &--title {
-    @apply  font-display text-lg md:text-2xl capitalize align-top hover:text-yellow-500 transition-colors;
-  }
-  &--summary {
-    @apply  text-xs md:text-sm py-2 hover:text-gray-500 transition-colors mb-4;
-  }  
-  &--details {
-    @apply text-gray-600 text-tiny md:text-xs py-2;
-  }
-  &--category {
-    @apply p-1 rounded-sm flex items-center;
-    font-size: 0.65rem;
-  }
-  .canyoning-meetings {
-    .event-instance--category {
-      @apply text-blue-400
+
+  .events-wrapper {
+    @apply flex flex-col md:flex-row md:flex-wrap gap-2;
+    .event-instance {
+      flex-basis: 100%;
+      @apply p-2 md:p-4 border-2 rounded-md;
+      &--title {
+        @apply  font-display text-lg md:text-2xl capitalize align-top hover:text-yellow-500 transition-colors;
+      }
+      &--summary {
+        @apply  text-xs md:text-sm py-2 hover:text-gray-500 transition-colors mb-4;
+      }  
+      &--details {
+        @apply text-gray-600 text-tiny md:text-xs py-2;
+      }
+      &--category {
+        @apply p-1 rounded-sm flex items-center;
+        font-size: 0.65rem;
+      }
+      .canyoning-meetings {
+        .event-instance--category {
+          @apply text-blue-400
+        }
+      }
+      .workshops-and-training-courses {
+        .event-instance--category {
+          @apply text-yellow-400;
+        }
+      }
+    }
+    @media (min-width: 1024px) {
+      .event-instance {
+        flex-basis: 49%;
+      }
     }
   }
-  .workshops-and-training-courses {
-    .event-instance--category {
-      @apply text-yellow-400;
-    }
-  }
-}
-@media (min-width: 1024px) {
-  .event-instance {
-    flex-basis: 49%;
-  }
-}
+
