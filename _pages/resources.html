@@ -101,9 +101,9 @@ keywords:
           
           // eventEl.appendChild(locationEl);
           // eventEl.appendChild(summaryEl);
-          eventElement.href = url;
+          eventInstance.href = url;
           // Redirect to a dynamic URL on event click
-          eventElement.addEventListener('click', function () {        
+          eventInstance.addEventListener('click', function () {        
             event.preventDefault();
             eventTitle.innerText = info.event.title;
             eventLocation.appendChild(locationEl);
@@ -117,14 +117,17 @@ keywords:
     });
 </script>  
   <div class="container mx-auto lg:w-3/5 grid grid-cols-2">
-    <div id='calendar' class="col-span-1"></div>
-    <div id='event' class="col-span-1 flex flex-col gap-2 p-6 border-2 rounded-md border-gray-500">
-      <h2 id="event-title"></h2>
-      <div id="event-description" class="event-description"></div>
-      <div id="event-location" class="event-location"></div>
-      <div id="event-organizer"></div>
-      <div id="event-cta" class="event-cta"></div>
-      <span class="text-tiny">Opens in a new tab</span>
+    <div id='calendar' class="col-span-1 p-6"></div>
+    <div id='events' class="col-span-1 p-6">
+      <h2 class="section-heading text-yellow-500">Events</h2>
+      <div class="flex flex-col gap-2 p-6 border-2 rounded-md border-gray-500">
+        <h3 id="event-title"></h3>
+        <div id="event-description" class="event-description"></div>
+        <div id="event-location" class="event-location"></div>
+        <div id="event-organizer"></div>
+        <div id="event-cta" class="event-cta"></div>
+        <span class="text-tiny">Opens in a new tab</span>
+      </div>
     </div>
   </div>
 
