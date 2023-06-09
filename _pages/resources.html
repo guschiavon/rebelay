@@ -129,11 +129,22 @@ keywords:
 
 
   <script>
-    // Function to fetch events from Google Calendar
+    // Function to parse event description JSON and extract information
+      function parseEventDescription(description) {
+        try {
+          const { url, organizer, summary } = JSON.parse(description);
+          return { url, organizer, summary };
+        } catch (error) {
+          console.error('Error parsing event description:', error);
+          return { url: '', organizer: '', summary: '' };
+        }
+      }
+
+      // Function to fetch events from Google Calendar
       async function fetchEventsFromGoogleCalendar(calendarId, key) {
         try {
           const response = await fetch(
-           `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${key}`
+            `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${key}`
           );
 
           if (!response.ok) {
@@ -141,14 +152,24 @@ keywords:
           }
 
           const data = await response.json();
-          console.log(data);
-          const events = data.items.map((event) => ({
-            summary: event.summary,
-            url: event.htmlLink,
-            location: event.location,
-            organizer: event.organizer.displayName,
-          }));
+          const events = data.items.map((event) => {
+            const { url, organizer, summary } = parseEventDescription(
+              event.description || ''
+            );
 
+            return {
+              createdAt: event.created,
+              addToCal: event.htmlLink,
+              startDate: event.start.dateTime,
+              endDate: event.end.dateTime,
+              type: event.organizer.displayName,
+              summary: event.summary,
+              url: url || event.htmlLink,
+              location: event.location,
+              organizer: organizer || event.organizer.displayName,
+            };
+          });
+          console.log(events);
           return events;
         } catch (error) {
           console.error(error);
