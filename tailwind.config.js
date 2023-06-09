@@ -20,6 +20,18 @@ module.exports = {
       'workshops-and-training-courses',
       'event-instance--category'
     ],
+    options: {
+      safelist: [
+        'event-instance',
+        'event-instance--title',
+        'event-instance--summary',
+        'event-instance--details',
+        'events-wrapper--category',
+        'canyoning-meetings',
+        'workshops-and-training-courses',
+        'event-instance--category'
+      ],      
+    },
   },
   darkMode: false,
   theme: {
