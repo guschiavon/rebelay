@@ -70,7 +70,7 @@ keywords:
           }
         ],
         eventDidMount: function (info) {
-          console.log(event);
+          console.log(info);
           // Display event information on the event element
           let eventElement = info.el;
           console.log(eventElement);
@@ -82,7 +82,7 @@ keywords:
 
           // Access the custom data within extendedProps
           let url = extendedProps.url;
-          event.setProp()
+          // info.setProp('url',url)          
           let summary = extendedProps.summary;
           let organizer = extendedProps.organizer;
 
