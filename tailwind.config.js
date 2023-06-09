@@ -8,7 +8,7 @@ module.exports = {
       "./_posts/*.md",
       "./*.html",
       "./js/*.js",
-      "./js/components/*.js",
+      "./js/components/*.component.js",
     ],
     safelist: [
       'event-instance',
