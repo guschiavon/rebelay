@@ -29,13 +29,13 @@ navigation:
       submenus:
         - name: Item 1
           url: /        
-    # - name: Resources
-    #   url: /resources
-    #   is_dropdown: false
-    #   style_as_button: false
-    #   submenus:
-    #     - name: Item 1
-    #       url: /        
+    - name: Calendar
+      url: /events
+      is_dropdown: false
+      style_as_button: false
+      submenus:
+        - name: Item 1
+          url: /        
     - name: Merch
       url: /shop
       is_dropdown: false
