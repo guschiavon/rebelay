@@ -25,7 +25,7 @@ const fetchEventsFromGoogleCalendars = async function (calendarIds, key) {
         const data = await response.json();
         const calendarEvents = data.items.map((event) => {
           const { url, organizer, summary } = parseEventDescription(
-            event.description || ''
+            event.description || 'No information provided'
           );
 
           const eventInfo = {
@@ -40,8 +40,9 @@ const fetchEventsFromGoogleCalendars = async function (calendarIds, key) {
             url: url || event.htmlLink,
             location: event.location,
             organizer: organizer || event.organizer.displayName,
+            logo: 'https://lh3.googleusercontent.com/d/' + event.attachments[0].fileId,
           };
-
+          
           return { ...event, ...eventInfo };
         });
 

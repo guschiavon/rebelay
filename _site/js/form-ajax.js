@@ -12,8 +12,7 @@
     }
 
     // Fetch the form element
-    var formEl = document.getElementsByTagName("form")[0];
-    console.log(formEl);
+    var formEl = document.getElementsByTagName("form")[0];    
     
     // Override the submit event
     formEl.addEventListener("submit", function (e) {
