@@ -1,6 +1,5 @@
 import eventListing from "../js/components/event-listing.component.js";
-const createEventInstance = (event) => {
-  const eventsEl = document.getElementById('events');    
+const createEventInstance = (event, container) => {  
   let {
     startDate,
     endDate,
@@ -17,7 +16,7 @@ const createEventInstance = (event) => {
   eventInstance.classList.add('event-instance');
   eventInstance.classList.add('bg-gray-100');
   eventInstance.innerHTML = eventListing(type,url,title,startDate,endDate,location,summary,addToCal,logo)
-  eventsEl.appendChild(eventInstance);
+  container.appendChild(eventInstance);
 }
 
 export default createEventInstance;

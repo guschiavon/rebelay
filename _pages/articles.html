@@ -43,7 +43,7 @@ keywords:
 </script>
 <script>
   const archiveListings = document.querySelectorAll('.archive-listing--container');
-  console.log(archiveListings);
+  
   archiveListings.forEach((i) => {
     gsap.set(i, {
       opacity: 0,
@@ -52,8 +52,7 @@ keywords:
   })
   ScrollTrigger.batch(archiveListings, {
     onEnter: (elements, triggers) => {
-      gsap.to(elements, { opacity: 1, y: 0, stagger: 0.15, delay: 0.2 });
-      console.log(elements.length, "elements entered");
+      gsap.to(elements, { opacity: 1, y: 0, stagger: 0.15, delay: 0.2 });  
     },
   })
 </script>
