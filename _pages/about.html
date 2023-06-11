@@ -46,8 +46,8 @@ keywords:
       <div class="flex-1">
         <div class="py-6">
           <form id="contact-form" action="" method="post" class="contact-form">
-            <input type="email" placeholder="Email" class="form-input" required>
-            <input type="name" placeholder="Name" class="form-input" required>            
+            <input type="email" placeholder="Email" name="_replyto" class="form-input" required>
+            <input type="name" placeholder="Name" name="name" class="form-input" required>            
             <select name="subject" id="subject" class="form-input">
               <option value="" disabled selected>Re:</option>
               <option value="general">General Inquiries</option>
@@ -55,9 +55,7 @@ keywords:
               <option value="events">I want to promote an event</option>
               <option value="business">I want to promote my business</option>
             </select>
-            <textarea name="message" id="" rows="7" class="form-input" placeholder="Please write your message" required>
-
-            </textarea>
+            <textarea name="message" id="" rows="7" class="form-input" placeholder="Please write your message" required></textarea>
             <input type="submit" value="Send message" class="form-btn">
             <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
             <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
