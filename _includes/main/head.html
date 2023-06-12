@@ -3,6 +3,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include main/og.html%}
   {{site.data.settings.configuration.head_code_block}}
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q65WD6ZB6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5Q65WD6ZB6');
+  </script>
   <link rel="stylesheet" href="/style/main.css">
 </head>
