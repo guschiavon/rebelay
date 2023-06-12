@@ -339,7 +339,7 @@
   </div>
 </main>
 
-<div class="article-gallery bg-gray-800 p-6 " style="background-image: url(/assets/images/textures/metal-texture-with-dust-scratches-cracks-textured-backgrounds.jpg); background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat;">
+<div class="article-gallery bg-gray-800 p-6 " style='background-image: url(/generated/assets/images/textures/metal-texture-with-dust-scratches-cracks-textured-backgrounds-1200-493e29324.webp); background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat;'>
   <div class="container mx-auto">
     <div class="py-4">
       <h2 class="section-heading text-gray-50">Gallery</h2>
@@ -478,10 +478,11 @@
       
     </div>
 </div>
-<script>
+<script async>
   const article = document.querySelector('.article-content');  
   const images = article.querySelectorAll('img');  
   images.forEach((img) => {
+    img.setAttribute('loading', 'lazy');
     let parent = img.parentNode;    
     let wrapper = document.createElement('div');
     wrapper.classList.add('article-content--image');
@@ -496,7 +497,6 @@
       wrapper.appendChild(caption);    
     }
 
-    img.setAttribute('loading', 'lazy');
   });
   function setActiveImg(t) {
     let imgSrc = t.src;      
