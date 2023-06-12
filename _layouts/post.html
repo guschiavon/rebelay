@@ -4,15 +4,15 @@ layout: default
 
 <main class="article-wrapper">
   <div class="container mx-auto md:px-16 py-8">
-    <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
+    <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/Article">
       <header class="article-header">
         <div class="article-feature-image">
-          {% picture article_feature "{{page.feature_image}}" --img alt="{{page.feature_image_alt_text}}" class="responsive-img" %}          
+          {% picture article_feature "{{page.feature_image}}" --img alt="{{page.feature_image_alt_text}}" class="responsive-img" itemprop="image" %}          
         </div>
         <span class="article-category block uppercase font-display text-gray-400 border-b-2 border-yellow-500 my-4 pb-1">
           {{page.article_category}}
         </span>
-        <h1 class="article-header--title text-3xl md:text-4xl lg:text-6xl text-yellow-400 font-display py-6" itemprop="title">
+        <h1 class="article-header--title text-3xl md:text-4xl lg:text-6xl text-yellow-400 font-display py-6" itemprop="headline">
           {{page.display_title}}
         </h1>
         <div class="article-byline flex flex-col md:flex-row gap-4 justify-center md:justify-between md:items-center py-4">
@@ -21,12 +21,12 @@ layout: default
             <div class="rounded-full w-9 h-9 md:w-14 md:h-14 border-t-4 border-white overflow-hidden">
               {% picture xsmall "{{author.profile_image}}" --img alt="Profile photo of {{author.name}}, writer of this article"%}              
             </div>
-            <p class="article-byline--author text-tiny md:text-sm font-extralight text-gray-500">Words by: {{author.name}}</p>
+            <p class="article-byline--author text-tiny md:text-sm font-extralight text-gray-500">Words by: <span itemprop="author">{{author.name}}</span></p>
           </div>           
           <span class="font-light font-display text-tiny md:text-sm text-gray-500 uppercase"><span><svg xmlns="http://www.w3.org/2000/svg" class="inline-block mr-1" height="20" viewBox="0 -960 960 960" width="20" fill="#555555">
             <path
               d="M583.918-240q-36.763 0-62.648-25.659-25.884-25.659-25.884-62.423 0-36.763 25.659-62.648 25.659-25.884 62.423-25.884 36.763 0 62.648 25.659Q672-365.296 672-328.532q0 36.763-25.659 62.648Q620.682-240 583.918-240ZM228.309-116.001q-27.008 0-45.658-19-18.65-19-18.65-45.308v-503.382q0-26.308 18.65-45.308t45.658-19h87.385v-100.615h53.537v100.615h223.076v-100.615h51.999v100.615h87.385q27.008 0 45.658 19 18.65 19 18.65 45.308v503.382q0 26.308-18.65 45.308t-45.658 19H228.309Zm0-51.999h503.382q4.616 0 8.463-3.846 3.846-3.847 3.846-8.463v-335.382H216v335.382q0 4.616 3.846 8.463 3.847 3.846 8.463 3.846Z" />
-          </svg></span>{{page.date | date_to_string}}</span>
+          </svg></span><span itemprop="datePublished">{{page.date | date_to_string}}</span></span>
         </div>
         <div class="py-2 sticky">
           {% include components/share-menu.html %}
@@ -34,11 +34,11 @@ layout: default
       </header>
       <hr class="text-yellow-400 py-2">
       {% if page.content_type == 'article' %}
-      <section class="article-content" itemprop="content">
+      <section class="article-content" itemprop="articleBody">
         {{content}}
       </section>
       {% elsif page.content_type == 'photostory' %}
-      <section class="article-content">
+      <section class="article-content" itemprop="articleBody">
         <div class="gallery">
           {% assign images = page.gallery %}
           <div class=" flex flex-col gap-2">
@@ -47,9 +47,7 @@ layout: default
               {% picture xlarge "{{image.image}}" --img alt="{{image.alt_text}}" class="photostory" %}
               <figcaption class="flex flex-col gap-y-2 lg:px-6"><span class="uppercase font-display text-lg tracking-wide text-yellow-500">{{image.title}}</span><span class="pb-6 font-light font-body text-tiny md:text-sm text-gray-700 tracking-wider">{{image.caption}}</span></figcaption>            
             </figure>                      
-            {% endfor %}
-            
-
+            {% endfor %}        
           </div>
         </div>
       </section>
