@@ -1,11 +1,11 @@
-const eventListing = (type,url,title,startDate,endDate,location,summary,addToCal,logo) => {
+const eventListing = (type,url,title,startDate,endDate,location,summary,addToCal,logo,organizer) => {
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   return `
     <div class="flex flex-col gap-1 ${type.toLowerCase().split(' ').join('-')}">                                                              
       <div class="flex flex-col gap-1">
       <span class="event-instance--category">${type}</span>
       <div class="w-28 h-28">
-        <img src="${logo}" class="object-contain w-full h-full"/>
+        <img src="${logo}" class="object-contain w-full h-full" alt="logo for ${title}" />
       </div>
         <a href=${url} target="_blank" arial-label="link opens new tab for event named ${title}"><h3 class="event-instance--title">${title}</h3></a>
       </div>
