@@ -44,8 +44,8 @@ layout: default
           <div class=" flex flex-col gap-2">
             {% for image in images %}  
             <figure class="photostory-image w-full">
-              {% picture xlarge "{{image.image}}" --img alt="{{image.alt_text}}" %}
-              <figcaption class="px-4 py-2 md:py-4 md:px-6 font-light font-body text-tiny md:text-sm bg-gray-600 text-yellow-400 tracking-wider">{{image.caption}}</figcaption>            
+              {% picture xlarge "{{image.image}}" --img alt="{{image.alt_text}}" class="photostory" %}
+              <figcaption class="flex flex-col gap-y-2 lg:px-6"><span class="uppercase font-display text-lg tracking-wide text-yellow-500">{{image.title}}</span><span class="pb-6 font-light font-body text-tiny md:text-sm text-gray-700 tracking-wider">{{image.caption}}</span></figcaption>            
             </figure>                      
             {% endfor %}
             
@@ -89,18 +89,19 @@ layout: default
       <div class="active-gallery--img rounded-md overflow-hidden">
         <picture>
           <source id="activeSrcset" srcset='{% picture only_srcset "{{gallery[0].image}}"%}'>
-          <img id="activeImg" src='{% picture preview "{{gallery[0].image}}" %}' alt="{{gallery[0].alt_text}}" data-srcset="{% picture only_srcset "{{gallery[0].image}}"%}" class="object-cover h-full w-full" loading="lazy">
+          <img id="activeImg" src='{% picture preview "{{gallery[0].image}}" %}' alt="{{gallery[0].alt_text}}"  data-srcset="{% picture only_srcset "{{gallery[0].image}}"%}" class="object-cover h-full w-full" loading="lazy">
         </picture>        
          
       </div>
       <div class="active-gallery--caption col-span-1 p-6">
+        <h3 id="activeTitle" class="section-heading text-gray-200 mb-4">{{gallery[0].title}}</h3>
         <p id="activeCaption">{{gallery[0].caption}}</p>
       </div>
     </div>
     <div class="flex md:flex-row gap-2 flex-wrap py-2 justify-center">    
       {% for img in gallery %}
       <button class="h-24 w-24 rounded-md overflow-hidden">
-        <img src="{{img.image}}" alt="{{img.alt_text}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
+        <img src="{{img.image}}" alt="{{img.alt_text}}" data-title="{{img.title}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
       </button>
       {% endfor %}
     </div>
@@ -122,20 +123,25 @@ layout: default
   images.forEach((img) => {
     let parent = img.parentNode;    
     let wrapper = document.createElement('div');
-    let caption = document.createElement('caption');
-    caption.innerText = img.getAttribute('alt');
     wrapper.classList.add('article-content--image');
     // set the wrapper as child (instead of the element)
     parent.replaceChild(wrapper, img);
     // set element as child of wrapper
     wrapper.appendChild(img);
-    wrapper.appendChild(caption);    
+    // conditional for photostory
+    if (!img.classList.contains('photostory')){
+      let caption = document.createElement('caption');
+      caption.innerText = img.getAttribute('alt');
+      wrapper.appendChild(caption);    
+    }
+
     img.setAttribute('loading', 'lazy');
   });
   function setActiveImg(t) {
     let imgSrc = t.src;      
     activeImg.setAttribute('src', imgSrc);
     activeSrcset.setAttribute('srcset', t.dataset.srcset);
+    activeTitle.innerText = t.dataset.title || '';
     activeCaption.innerHTML = t.dataset.caption; 
   }
   function setOrientation(t) {
@@ -157,6 +163,7 @@ layout: default
     const galleryImgs = document.querySelectorAll('.gallery-thumb');    
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
+    const activeTitle = document.getElementById('activeTitle');    
     const activeSrcset = document.getElementById('activeSrcset');
     galleryImgs.forEach((img) => {
       document.addEventListener('keydown', (e)=>{

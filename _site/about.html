@@ -31,7 +31,16 @@
 <link rel="canonical" href="https://rebelay.com/about">
 
   <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet preload" onload="this.rel = 'stylesheet'" as="style" crossorigin="anonymous" type="text/css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q65WD6ZB6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-5Q65WD6ZB6');
+  </script>
   <link rel="stylesheet" href="/style/main.css">
 </head>
 
@@ -133,8 +142,8 @@
       <div class="flex-1">
         <div class="py-6">
           <form id="contact-form" action="" method="post" class="contact-form">
-            <input type="email" placeholder="Email" class="form-input" required>
-            <input type="name" placeholder="Name" class="form-input" required>            
+            <input type="email" placeholder="Email" name="_replyto" class="form-input" required>
+            <input type="name" placeholder="Name" name="name" class="form-input" required>            
             <select name="subject" id="subject" class="form-input">
               <option value="" disabled selected>Re:</option>
               <option value="general">General Inquiries</option>
@@ -142,12 +151,10 @@
               <option value="events">I want to promote an event</option>
               <option value="business">I want to promote my business</option>
             </select>
-            <textarea name="message" id="" rows="7" class="form-input" placeholder="Please write your message" required>
-
-            </textarea>
-            <input type="submit" value="Send message" class="form-btn">
+            <textarea name="message" id="" rows="7" class="form-input" placeholder="Please write your message" required></textarea>
             <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
             <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+            <input type="submit" value="Send message" class="form-btn">
             <input type="hidden" name="inbox_key" value="rebelay-mail">
           </form>
         </div>
