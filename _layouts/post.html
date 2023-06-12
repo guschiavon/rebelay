@@ -101,8 +101,7 @@ layout: default
     <div class="flex md:flex-row gap-2 flex-wrap py-2 justify-center">    
       {% for img in gallery %}
       <button class="h-24 w-24 rounded-md overflow-hidden" aria-label="toggle image">
-        
-        <img src='{% picture small "{{img.image}}" %}' alt="{{img.alt_text}}" data-title="{{img.title}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
+        <img src='{% picture gallery-thumb "{{img.image}}" %}' alt="{{img.alt_text}}" data-title="{{img.title}}" data-caption="{{img.caption}}" class="gallery-thumb object-cover w-full h-full" data-srcset='{% picture only_srcset "{{img.image}}"%}' loading="lazy">
       </button>
       {% endfor %}
     </div>
