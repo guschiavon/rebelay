@@ -2,7 +2,7 @@
 layout: post
 content_type: article
 category: feature
-title: Taiwan Canyoning Expedition - Rebelay Canyoning
+title: Taiwan Canyoning Expedition - Re:belay Canyoning
 display_title: The antics of the Taiwan Canyoning Expedition 
 description: The story behind opening one of the longest canyons in Taiwan, the epic Malishan River
 date: 2020-01-31 10:20:00
@@ -11,42 +11,55 @@ author: gus
 photos_by: Gus Schiavon
 gallery:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-18.jpg
+    title:
     alt_text: Canyoning topography for Taiwan Canyoning Expedition
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-1.jpg
+    title:
     alt_text: Canyoning approach
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-2.jpg
+    title:
     alt_text:  Traversing a narrow ridge while canyoning
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-8.jpg
+    title:
     alt_text: Waterfalls in Taiwan Canyoning Expedition
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-3.jpg
+    title:
     alt_text: Akira Tanaka using canyoning expedition-style anchors for Taiwan Canyoning Expedition
     caption:
   - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-14.jpg
+    title:
     alt_text:
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-6.jpg
+    title:
     alt_text:
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-10.jpg
+    title:
     alt_text:
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-17.jpg
+    title:
     alt_text:
     caption:
   - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg
+    title:
     alt_text: A gorge with rock fall in Taiwan    
     caption:
   - image: /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-12.jpg
+    title:
     alt_text:
     caption:
   - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-7.jpg
+    title:
     alt_text:
     caption:
   - image:  /assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-4.jpg
+    title:
     alt_text:
     caption: 
 canyon_beta:

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Re:belay Canyoning
-description: 
-feature_image: 
+description: Re:belay is a channel for canyoning creators and ethusiasts. We bring you stories of epics, industry interviews and more.
+feature_image: /assets/images/preview-rebelay-logo-dark.jpg
 feature_image_alt_text: 
 feature_video:
   title: We are Canyoneers
@@ -84,7 +84,7 @@ page_configuration:
       <form action="" method="post" class="flex flex-col gap-2">
         <input type="email" name="email" placeholder="Your Email" class="newsletter-input--email">
         <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
-        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+        <script src="https://js.hcaptcha.com/1/api.js" defer></script>
         <input type="submit" value="Sign Up" class="form-btn">
       </form>
     </div>
@@ -113,17 +113,6 @@ page_configuration:
     <a href="/about#contact" class="btn btn-solid--accent px-3 py-2 bg-yellow-500 hover:bg-yellow-400 font-display uppercase tracking-wider relative inline-block">Get in touch</a>
   </div>
 </div>
-<!-- Netlify Script -->
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+
 <script src="/js/slider.js" defer></script>
 <script src="/js/form-ajax.js" type="text/javascript"></script>

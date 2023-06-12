@@ -1,5 +1,5 @@
 <article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
-  <a href="{{post.url}}" class="blog-card--image">
+  <a href="{{post.url}}" class="blog-card--image" aria-label="image links to post titled {{post.title}}">
     {% picture large "{{post.feature_image}}" --img alt="{{post.feature_image_alt_text}}" class="bg-image" %}
   </a>
   <div class="p-4 flex flex-col justify-between">
