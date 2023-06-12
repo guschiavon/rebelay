@@ -20,7 +20,8 @@ presets:
     fallback_width: 250
     fallback_format: webp
   preview:
-    markup: direct_url        
+    markup: direct_url
+    formats: webp       
     fallback_width: 600
     fallback_format: webp
   only_srcset:
