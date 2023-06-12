@@ -7,7 +7,7 @@
   <a href="fb-messenger://share/?link=https%3A%2F%2Frebelay.com%2F{{page.url | relative_url | replace: '/', '%2F' | replace: '-', '%45'}}" class="social-share-icon lg:hidden" rel="noopener noreferrer" target="_blank">
     {% include social-icons.html icon="Messenger" %}
   </a>
-  <button id="url-share" onclick="copyPageUrl()" class="social-share-icon" aria-label="copy page URL">
+  <button onclick="copyPageUrl()" class="social-share-icon" aria-label="copy page URL">
     {% include social-icons.html icon="Link" %}
   </button>
   <a href="mailto:?subject=I%20found%20this%20interesting&body={{ site.data.settings.general.site_url }}{{ page.url | relative_url }}"
