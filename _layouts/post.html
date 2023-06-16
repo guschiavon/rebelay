@@ -109,7 +109,7 @@ layout: default
   <div class="container mx-auto text-center py-6">
     <h2 class="section-heading">Read more stories</h2>
   </div>
-    <div id="slider" class="pl-4 related-posts--container md:container md:mx-auto flex gap-x-4 py-6 overflow-x-scroll">
+    <div id="slider" class="slider pl-4 related-posts--container md:container md:mx-auto flex gap-x-4 py-6 overflow-x-scroll">
       {% for post in site.posts limit: 3 %}
       {% include components/article-card.html %}      
       {% endfor %}

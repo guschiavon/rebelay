@@ -45,7 +45,7 @@ page_configuration:
     <p class="pb-4">Read the latest epic stories from descents around the world, curated by Re:belay</p>
     <hr class="mb-8">
   </div>
-  <div id="slider" class="articles-wrapper" style="touch-action: auto;">
+  <div id="slider" class="articles-wrapper slider" style="touch-action: auto;">
     {% assign posts = site.posts | where_exp: "post", "post.category != 'interview' "%}
     {% for post in posts offset: 1 limit: 3 %}
     {% include components/article-card.html %}
