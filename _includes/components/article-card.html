@@ -1,16 +1,16 @@
 <article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
   <a href="{{post.url}}" class="blog-card--image" aria-label="image links to post titled {{post.title}}">
-    {% picture large "{{post.feature_image}}" --img alt="{{post.feature_image_alt_text}}" class="bg-image" %}
+    {% picture large "{{post.feature_image}}" --img alt="{{post.feature_image_alt_text}}" class="bg-image" loading="lazy" itemprop="image"%}
   </a>
   <div class="p-4 flex flex-col justify-between">
     {% include components/post-category.html %}
     <a href="{{post.url}}" class="py-2">
-      <h2 class="article-card--title">{{ post.display_title }}</h2>
+      <h2 class="article-card--title" itemprop="headline">{{ post.display_title }}</h2>
     </a>
     <a href="{{post.url}}">
-      <p class="article-card--description">{{post.description}}</p>
+      <p class="article-card--description" itemprop="description">{{post.description}}</p>
     </a>
     {% assign author = site.data.authors[post.author] %}
-    <p class="article-card--author">By {{author.name}}</p>
+    <p class="article-card--author" itemprop="author">By {{author.name}}</p>
   </div>
 </article>

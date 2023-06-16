@@ -4,12 +4,12 @@ layout: default
 
 <main class="article-wrapper">
   <div class="container mx-auto md:px-16 py-8">
-    <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/Article">
+    <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
         <div class="article-feature-image">
           {% picture article_feature "{{page.feature_image}}" --img alt="{{page.feature_image_alt_text}}" class="responsive-img" itemprop="image" %}          
         </div>
-        <span class="article-category block uppercase font-display text-gray-400 border-b-2 border-yellow-500 my-4 pb-1">
+        <span class="article-category block uppercase font-display text-gray-400 border-b-2 border-yellow-500 my-4 pb-1" itemprop="genre">
           {{page.article_category}}
         </span>
         <h1 class="article-header--title text-3xl md:text-4xl lg:text-6xl text-yellow-400 font-display py-6" itemprop="headline">
