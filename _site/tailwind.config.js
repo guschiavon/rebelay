@@ -18,7 +18,8 @@ module.exports = {
       '.events-wrapper--category',
       '.canyoning-meetings',
       '.workshops-and-training-courses',
-      '.event-instance--category'
+      '.event-instance--category',
+      '.article-content--image'
     ],
     options: {
       safelist: [
@@ -29,7 +30,8 @@ module.exports = {
         '.events-wrapper--category',
         '.canyoning-meetings',
         '.workshops-and-training-courses',
-        '.event-instance--category'
+        '.event-instance--category',
+        '.article-content--image'
       ],      
     },
   },

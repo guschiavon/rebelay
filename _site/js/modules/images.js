@@ -15,8 +15,7 @@
     }
   }
 
-  const setMarkdownImage = (img) => {
-    img.setAttribute('loading', 'lazy');
+  const setMarkdownImage = (img) => {    
     let parent = img.parentNode;    
     let wrapper = document.createElement('div');
     wrapper.classList.add('article-content--image');
