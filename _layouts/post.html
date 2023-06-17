@@ -115,26 +115,13 @@ layout: default
       {% endfor %}
     </div>
 </div>
-<script type="module" >
-  import { setActiveImg, setOrientation } from '/js/modules/images.js';
+<script type="module" async>
+  import { setActiveImg, setOrientation, setMarkdownImage } from '/js/modules/images.js';
 
   const article = document.querySelector('.article-content');  
   const images = article.querySelectorAll('img');  
   images.forEach((img) => {
-    img.setAttribute('loading', 'lazy');
-    let parent = img.parentNode;    
-    let wrapper = document.createElement('div');
-    wrapper.classList.add('article-content--image');
-    // set the wrapper as child (instead of the element)
-    parent.replaceChild(wrapper, img);
-    // set element as child of wrapper
-    wrapper.appendChild(img);
-    // conditional for photostory
-    if (!img.classList.contains('photostory')){
-      let caption = document.createElement('caption');
-      caption.innerText = img.getAttribute('alt');
-      wrapper.appendChild(caption);    
-    }
+    setMarkdownImage(img);
   });
 
   const eventHandler = (e,t,i,s,l,c) => {
@@ -148,8 +135,7 @@ layout: default
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
     const activeTitle = document.getElementById('activeTitle');    
-    const activeSrcset = document.getElementById('activeSrcset');
-    console.log(activeSrcset);
+    const activeSrcset = document.getElementById('activeSrcset');    
     galleryImgs.forEach((img) => {
       document.addEventListener('keydown', (e)=>{
         if (e.key === "Tab" && document.activeElement === img.parentElement) {

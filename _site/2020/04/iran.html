@@ -102,7 +102,7 @@
     <article class="article md:w-5/6 lg:w-3/5 mx-auto px-10" itemscope itemtype="https://schema.org/BlogPosting">
       <header class="article-header">
         <div class="article-feature-image">
-          <picture><source srcset="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-750-197dcf841.avif 750w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-400-197dcf841.avif 400w" type="image/avif"><source srcset="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-750-0b787d318.webp 750w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-400-0b787d318.webp 400w" type="image/webp"><img alt="" class="responsive-img" itemprop="image" src="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-800-82b874d8b.jpg"></picture>
+          <picture><source srcset="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-1000-197dcf841.avif 1000w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-800-197dcf841.avif 800w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-650-197dcf841.avif 650w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-400-197dcf841.avif 400w" type="image/avif"><source srcset="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-1000-0b787d318.webp 1000w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-800-0b787d318.webp 800w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-650-0b787d318.webp 650w, /generated/assets/images/iran/canyoning-rebelay-003-iran-11-400-0b787d318.webp 400w" type="image/webp"><img alt="" class="responsive-img" itemprop="image" src="/generated/assets/images/iran/canyoning-rebelay-003-iran-11-800-82b874d8b.jpg"></picture>
           
         </div>
         <span class="article-category block uppercase font-display text-gray-400 border-b-2 border-yellow-500 my-4 pb-1" itemprop="genre">
@@ -475,26 +475,13 @@
       
     </div>
 </div>
-<script type="module" >
-  import { setActiveImg, setOrientation } from '/js/modules/images.js';
+<script type="module" async>
+  import { setActiveImg, setOrientation, setMarkdownImage } from '/js/modules/images.js';
 
   const article = document.querySelector('.article-content');  
   const images = article.querySelectorAll('img');  
   images.forEach((img) => {
-    img.setAttribute('loading', 'lazy');
-    let parent = img.parentNode;    
-    let wrapper = document.createElement('div');
-    wrapper.classList.add('article-content--image');
-    // set the wrapper as child (instead of the element)
-    parent.replaceChild(wrapper, img);
-    // set element as child of wrapper
-    wrapper.appendChild(img);
-    // conditional for photostory
-    if (!img.classList.contains('photostory')){
-      let caption = document.createElement('caption');
-      caption.innerText = img.getAttribute('alt');
-      wrapper.appendChild(caption);    
-    }
+    setMarkdownImage(img);
   });
 
   const eventHandler = (e,t,i,s,l,c) => {
@@ -508,8 +495,7 @@
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
     const activeTitle = document.getElementById('activeTitle');    
-    const activeSrcset = document.getElementById('activeSrcset');
-    console.log(activeSrcset);
+    const activeSrcset = document.getElementById('activeSrcset');    
     galleryImgs.forEach((img) => {
       document.addEventListener('keydown', (e)=>{
         if (e.key === "Tab" && document.activeElement === img.parentElement) {

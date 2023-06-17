@@ -14,4 +14,21 @@
       i.classList.remove('object-contain');
     }
   }
-export { setActiveImg, setOrientation};
+
+  const setMarkdownImage = (img) => {
+    img.setAttribute('loading', 'lazy');
+    let parent = img.parentNode;    
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('article-content--image');
+    // set the wrapper as child (instead of the element)
+    parent.replaceChild(wrapper, img);
+    // set element as child of wrapper
+    wrapper.appendChild(img);
+    // conditional for photostory
+    if (!img.classList.contains('photostory')){
+      let caption = document.createElement('caption');
+      caption.innerText = img.getAttribute('alt');
+      wrapper.appendChild(caption);    
+    }
+  }
+export { setActiveImg, setOrientation, setMarkdownImage};
