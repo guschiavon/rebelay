@@ -115,7 +115,9 @@ layout: default
       {% endfor %}
     </div>
 </div>
-<script async>
+<script type="module" >
+  import { setActiveImg, setOrientation } from '/js/modules/images.js';
+
   const article = document.querySelector('.article-content');  
   const images = article.querySelectorAll('img');  
   images.forEach((img) => {
@@ -133,28 +135,12 @@ layout: default
       caption.innerText = img.getAttribute('alt');
       wrapper.appendChild(caption);    
     }
-
   });
-  function setActiveImg(t) {
-    let imgSrc = t.src;      
-    activeImg.setAttribute('src', imgSrc);
-    activeSrcset.setAttribute('srcset', t.dataset.srcset);
-    activeTitle.innerText = t.dataset.title || '';
-    activeCaption.innerHTML = t.dataset.caption; 
-  }
-  function setOrientation(t) {
-    if (t.naturalHeight > t.naturalWidth) {
-      activeImg.classList.remove('object-cover');
-      activeImg.classList.add('object-contain');
-    } else if (t.naturalHeight < t.naturalWidth) {
-      activeImg.classList.add('object-cover');
-      activeImg.classList.remove('object-contain');
-    }
-  }
-  function eventHandler(e,t) {
+
+  const eventHandler = (e,t,i,s,l,c) => {
     t.addEventListener(e, () => {
-      setOrientation(t);    
-      setActiveImg(t);      
+      setOrientation(t,i);    
+      setActiveImg(t,i,s,l,c);
     })  
   }
   window.addEventListener('DOMContentLoaded', () => {    
@@ -163,6 +149,7 @@ layout: default
     const activeCaption = document.getElementById('activeCaption');    
     const activeTitle = document.getElementById('activeTitle');    
     const activeSrcset = document.getElementById('activeSrcset');
+    console.log(activeSrcset);
     galleryImgs.forEach((img) => {
       document.addEventListener('keydown', (e)=>{
         if (e.key === "Tab" && document.activeElement === img.parentElement) {
@@ -170,10 +157,11 @@ layout: default
           setActiveImg(img);
         }
       })
-        eventHandler('mouseover', img);
-        eventHandler('click', img);                        
+        eventHandler('mouseover', img, activeImg, activeSrcset, activeTitle, activeCaption);
+        eventHandler('click', img, activeImg, activeSrcset, activeTitle, activeCaption);                        
     })
   })
+  
   
   </script>
   <script src="/js/slider.js" defer></script>

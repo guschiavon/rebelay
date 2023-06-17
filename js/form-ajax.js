@@ -18,12 +18,13 @@
     formEl.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // if (grecaptcha) {
-      //   var recaptchaResponse = grecaptcha.getResponse();
-      //   if (!recaptchaResponse) { // reCAPTCHA not clicked yet
-      //     return false;
-      //   }
-      // }
+      if (hcaptcha) {
+        var recaptchaResponse = hcaptcha.getResponse();
+        if (!recaptchaResponse) { // reCAPTCHA not clicked yet
+          alert('Please fill the challenge to help us prevent spam')
+          return false;
+        }
+      }
 
       var request = new XMLHttpRequest();
 
