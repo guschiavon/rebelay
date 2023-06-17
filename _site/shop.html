@@ -102,27 +102,43 @@
 </div>
   <div class="flex-1">
     <div class="container mx-auto text-center p-4">
-  <h1 class="section-heading">Canyoning Apparel</h1>
-  <p class="section-paragraph">Coming soon...</p>
+  <div class="py-10 flex flex-col items-center justify-center">
+    <h1 class="section-heading">Canyoning Apparel</h1>
+    <p class="section-paragraph mb-6">Look good in and out of the canyon.</p>
+  </div>
+  <div id='collection-component-1687004279969' class="container mx-auto"></div>
   <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 md:px-10 lg:px-16 py-8 lg:py-16">
     <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat"
-      style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
+    style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
       <div class="flex-1 pb-5 lg:pb-0">
-        <h2 class="section-heading text-gray-100">Get notified when merch is added</h2>
-        <p class="section-paragraph">We promise to send you only merch-related messages.</p>
+        <h2 class="section-heading text-gray-50">Get notified when new merch is added</h2>
+        <p class="section-paragraph text-gray-50">We promise to send you only merch-related messages.</p>
       </div>
       <div class="newsletter-form flex-1">
-        <form action="" method="post" class="flex flex-col gap-2">
-          <input type="email" name="_replyto" placeholder="Your Email" class="newsletter-input--email">
+        <form id="form" action="" method="post" class="flex flex-col gap-2">
+          <input id="form-input--email" type="email" name="_replyto" placeholder="Your Email" class="newsletter-input--email">
           <input type="hidden" name="subject" value="interested in merch">
-          <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>
-          <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
           <input type="submit" value="notify me" class="form-btn">
+          <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb"></div>          
         </form>
       </div>
     </div>
   </section>
 </div>
+<script src="/js/components/home-collection.js" type="text/javascript" defer></script>
+<script>
+  const form = document.getElementById('form');
+  const formInput = document.getElementById('form-input--email');
+  document.addEventListener('click', () => {
+    if (formInput === document.activeElement) {
+      let script = document.createElement('script')
+      script.src = 'https://js.hcaptcha.com/1/api.js';
+      script.setAttribute('type', 'text/javascript');
+      form.appendChild(script);
+      script.innerHTML = `hcaptcha.reset()`;
+    }
+  })
+</script>
 
   </div>
   
