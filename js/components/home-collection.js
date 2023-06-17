@@ -25,7 +25,7 @@
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('collection', {
           id: '449981546818',
-          node: document.getElementById('collection-component-1687004279969'),
+          node: document.getElementById('collection-component-1687014937191'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
@@ -56,6 +56,8 @@
                 "button": {
                   "font-family": "Manrope, sans-serif",
                   "font-size": "16px",
+                  "text-transform": "uppercase",
+                  "letter-spacing": "1px",
                   "padding-top": "16px",
                   "padding-bottom": "16px",
                   "color": "#000000",
@@ -66,8 +68,7 @@
                   "background-color": "#ecb918",
                   ":focus": {
                     "background-color": "#d4a716"
-                  },
-                  "border-radius": "11px",
+                  },                  
                   "padding-left": "30px",
                   "padding-right": "30px"
                 },
@@ -124,6 +125,7 @@
                 "button": {
                   "font-family": "Manrope, sans-serif",
                   "font-size": "16px",
+                  "text-transform": "uppercase",
                   "padding-top": "16px",
                   "padding-bottom": "16px",
                   "color": "#000000",
@@ -134,8 +136,7 @@
                   "background-color": "#ecb918",
                   ":focus": {
                     "background-color": "#d4a716"
-                  },
-                  "border-radius": "11px",
+                  },                  
                   "padding-left": "30px",
                   "padding-right": "30px"
                 },
@@ -147,14 +148,15 @@
                 "title": {
                   "font-family": "Manrope, sans-serif",
                   "font-weight": "bold",
-                  "tracking": "2px",
+                  "letter-spacing": "1px",
                   "font-size": "26px",
                   "color": "#dfa30d"
                 },
                 "price": {
                   "font-family": "Manrope, sans-serif",
-                  "font-weight": "normal",
+                  "font-weight": "medium",
                   "font-size": "18px",
+                  "letter-spacing": "1px",
                   "color": "#4c4c4c"
                 },
                 "compareAt": {
@@ -200,6 +202,7 @@
                 "button": {
                   "font-family": "Manrope, sans-serif",
                   "font-size": "16px",
+                  "text-transform": "uppercase",
                   "padding-top": "16px",
                   "padding-bottom": "16px",
                   "color": "#000000",
@@ -210,8 +213,7 @@
                   "background-color": "#ecb918",
                   ":focus": {
                     "background-color": "#d4a716"
-                  },
-                  "border-radius": "11px"
+                  },                  
                 }
               },
               "text": {

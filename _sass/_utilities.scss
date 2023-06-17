@@ -1,3 +1,13 @@
+.btn {
+  @apply  px-3 py-2 font-display uppercase tracking-wider relative inline-block font-light border-2;
+}
+.btn-solid--accent {
+  @apply bg-yellow-400 hover:bg-yellow-500 border-yellow-400;
+}
+.btn-outline--accent {
+  @apply border-yellow-400 text-yellow-400 hover:bg-gray-200
+}
+
 .bg-image {
   @apply object-cover object-center w-full h-full;
 }

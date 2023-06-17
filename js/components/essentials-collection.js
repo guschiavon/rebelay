@@ -56,6 +56,7 @@
                   "button": {
                     "font-family": "Lato, sans-serif",
                     "font-size": "16px",
+                    "text-transform": "uppercase",
                     "padding-top": "16px",
                     "padding-bottom": "16px",
                     "color": "#000000",
@@ -67,7 +68,7 @@
                     ":focus": {
                       "background-color": "#d4a716"
                     },
-                    "border-radius": "11px",
+                    "border-radius": "0",
                     "padding-left": "30px",
                     "padding-right": "30px"
                   },
@@ -124,6 +125,7 @@
                   "button": {
                     "font-family": "Lato, sans-serif",
                     "font-size": "16px",
+                    "text-transform": "uppercase",
                     "padding-top": "16px",
                     "padding-bottom": "16px",
                     "color": "#000000",
@@ -197,6 +199,7 @@
                   "button": {
                     "font-family": "Lato, sans-serif",
                     "font-size": "16px",
+                    "text-transform": "uppercase",
                     "padding-top": "16px",
                     "padding-bottom": "16px",
                     "color": "#000000",
