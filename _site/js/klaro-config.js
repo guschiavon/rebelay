@@ -4,21 +4,21 @@ can change this by specifying the 'data-klaro-config' attribute on your script:
 <script src="klaro.js" data-klaro-config="myConfigVariableName"
 */
 var klaroConfig = {
-    testing: false,
+    version: 1,
     elementID: 'klaro',
     storageMethod: 'cookie',
-    storageName: 'klaro',
+    storageName: 'rebelay',
     noAutoLoad: false,
-        styling: {
+    styling: {
         theme: ['bottom', 'wide'],
     },
     htmlTexts: false,
-    cookieDomain: '.example.com',
-    cookieExpiresAfterDays: 45,
+    // cookieDomain: '.example.com',
+    cookieExpiresAfterDays: 120,
     default: false,
     mustConsent: false,
     acceptAll: true,
-    hideDeclineAll: false,
+    hideDeclineAll: true,
     hideLearnMore: false,
     disablePoweredBy: true,
     translations: {        
