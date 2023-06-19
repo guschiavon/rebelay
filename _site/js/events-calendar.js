@@ -7,7 +7,8 @@ const eventsEl = document.getElementById('events');
   const now = new Date().valueOf();      
 
   fetchEventsFromGoogleCalendars(calendarIds, apiKey)
-    .then((events) => {      
+    .then((events) => {    
+      console.log(events);
       events.sort(function(a,b) {
         let aStart = new Date(a.start.dateTime).valueOf();
         let bStart = new Date(b.start.dateTime).valueOf();

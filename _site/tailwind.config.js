@@ -19,7 +19,7 @@ module.exports = {
       '.canyoning-meetings',
       '.workshops-and-training-courses',
       '.event-instance--category',
-      '.article-content--image'
+      '.article-content--image'      
     ],
     options: {
       safelist: [

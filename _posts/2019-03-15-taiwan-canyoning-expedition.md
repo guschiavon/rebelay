@@ -87,6 +87,7 @@ Ryoji was a little shaken but unhurt. We were all ok, but were on the verge of e
 
 Taiwan's mountains are no secret but while hiking the peaks and serrated ridgelines is increasingly popular with locals and visitors alike, the gorges that lie between them are far less explored. Japanese river tracers, known as sawanobori or shower climbers, have already ventured deep into many of the country's gorges, relying on local knowledge to help them navigate their way upstream. But certain streams and rivers have proved to be nearly impossible to climb using their current techniques and expertise, naturally leaving them curious about what lies above and beyond.
 
+## The approach 
 If you can't climb up, maybe you can go down, went our rationale. Fired up by the adventurous tales told by the sawanobori, in 2015 I joined an international team of canyoneers who were pooling knowledge with the sawanobori on an exploration of one of Taiwan's longest and most remote gorges. The project was to be split into two legs, the first taking place over two weeks in October 2015 and the second, over three weeks in March 2016.
 
 Originally the team decided on a never-attempted multi-day descent of Taiwan's longest gorge, named Qia Kan. But freakish weather brought unseasonal torrential rain and cold temperatures that we knew would hamper our efforts on the planned 12-day mission. After careful consideration, we switched to Malishan river, a slightly shorter gorge featuring a smaller catchment, which we hoped could be completed before the bad weather hit.
@@ -102,6 +103,7 @@ Packing all the equipment and food we would need was a challenge on its own. Our
 The crux of the approach was an intense traverse of a narrow and unstable ridge. Thick cloud and rain added to the ambiance, as one-by-one we edged across this sketchy section with our heavy backpacks. Progress was slow as we tried to get our bearings. A Tyrolean traverse was then needed in order to overcome a bluff section, which set us back another two hours.
 
 ## Back to back
+
 Making use of natural features & pitons still remained the team's priority. A nice sequence of three falls measuring 30, 70 and 100 metres brought the day to an end, just as daylight began to fade and the rain became stronger. We found a flat ledge in between two massive landslides and set up camp. Under a tarp, Ryoji Onishi, the team's lead climber & sawanobori expert, managed to light a fire despite the wet wood. We warmed up and rejoiced. We were finally in.
 
 After a long 1,000-m ascent on the first day, day two of the approach presented unexpected obstacles. Our map's accuracy was called into question when we came across three pinnacles, amid near-shear and inaccessible terrain, none of which were marked. As the day progressed, it became clear that we would not reach the head of the canyon by dusk. We were forced to establish an improvised bivouac on a ledge next to loose-looking rock; not long before we witnessed a massive rockfall in the valley below. We began to wonder if we had made the right choice of route.
@@ -127,7 +129,3 @@ Tired but knowing that it wasn't long until we reached the end, we progress thro
 The gruelling return hike to the top of the mountain was the last challenge before we reached the village where we had been dropped off 8 days ago. We shared the stories and remembered the obstacles, scenery and team work necessary to overcome such a canyon. Our driver met us with a smile, warm sweet tea and some snacks. We couldn't be more grateful.
 
 Taiwan is now a mythical destination for canyoneers seeking long and challenging descents. The job is done.
-
-## One for all, all for one
-
-The international team for the Taiwan Canyoning Expedition (from top left): Ryoji Onish (JPN), Akira Tanaka (JPN), Gus Schiavon (BRA), Jasmine Li (TWN), Andrew Humphreys (USA), Supii Liem (IDN), Mike Harris (NZ), Moritz Sonntag (GER).
