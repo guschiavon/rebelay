@@ -1,7 +1,7 @@
 ---
 layout: post
 content_type: article
-category: feature
+category: expeditions
 title: Taiwan Canyoning Expedition - Re:belay Canyoning
 display_title: The antics of the Taiwan Canyoning Expedition 
 description: The story behind opening one of the longest canyons in Taiwan, the epic Malishan River

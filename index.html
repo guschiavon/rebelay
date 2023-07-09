@@ -75,7 +75,7 @@ page_configuration:
   {% endunless %}
 </div>
 <section id="newsletter-sign-up" class="newsletter-sign-up container mx-auto px-4 md:px-10 lg:px-16 py-8 lg:py-16">
-  <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat" style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
+  <div class="bg-yellow-400 px-10 py-24 flex flex-col md:flex-row bg-left bg-contain bg-no-repeat  rounded-md overflow-hidden" style="background-image: url(/assets//images/textures/dotted-bg.svg); background-blend-mode: difference;">
     <div class="flex-1 pb-5 lg:pb-0">
       <h2 class="section-heading text-gray-100">Never miss a story</h2>
       <p class="section-paragraph">Sign up to our newsletter and get notified about the latest canyoning articles</p>
@@ -111,17 +111,11 @@ page_configuration:
       </div>
     </div>
     <div class="flex-1 items-center">
-      <lite-youtube videoid="{{page.feature_video.video_id}}">Please accept cookies to see this video</lite-youtube>
+      <iframe data-src="https://www.youtube.com/embed/{page.feature_video.video_id}" data-name="YouTube" frameborder="0" class="w-full " style="aspect-ratio: 16 / 9;"></iframe>      
     </div>
   </div>
 </section>
-<div class="container mx-auto text-center px-4 md:px-10 lg:px-16 mb-6">
-  <div class="creator-cta" style='background-image: url({% picture direct "/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg" %});'>
-    <h2 class="relative section-heading text-yellow-400">Calling all canyoning photographers and filmmakers</h2>
-    <p class="section-paragraph relative text-gray-50 mb-4">Re:belay is a channel for you to reach your audience. We want to showcase your work. <br> Contact us to get featured on Re:belay.com</p>
-    <a href="/about#contact" class="btn btn-solid--accent">Get in touch</a>
-  </div>
-</div>
+{% include components/creator-cta.html %}
 
 <script src="/js/slider.js" defer></script>
 <script src="/js/form-ajax.js" type="text/javascript"></script>

@@ -27,28 +27,26 @@ var klaroConfig = {
         },        
         en: {
             privacyPolicyUrl: '/privacy',
+            consentNotice: {                
+                description: 'We want to offer you the best experience while visiting our site! Could we please enable some additional services for {purposes}? You can always change or withdraw your consent later.'
+            },        
             consentModal: {
                 description:
-                    'Here you can see and customize the information that we collect about you. Please note that disabling some of these might affect website functionality.' + 
-                    'Entries marked as "Example" are just for demonstration purposes and are not ' + 
-                    'really used on this website.',
+                    'Here you can see and customize the information that we collect about you. Please note that disabling some of these might affect website functionality.'
             },
             purposes: {
+                strict: {
+                    title: 'Strictly necessary'
+                },
                 analytics: {
                     title: 'Analytics'
                 },
                 security: {
                     title: 'Security'
-                },
-                livechat: {
-                    title: 'Livechat'
-                },
+                },               
                 advertising: {
                     title: 'Advertising'
-                },
-                styling: {
-                    title: 'Styling'
-                },
+                },                
             },
         },
     },
@@ -90,7 +88,7 @@ var klaroConfig = {
                     title: 'YouTube'
                 },
                 en: {
-                    description: 'Allows you to watch Youtube videos on the site and posts'
+                    description: 'Allows you to watch videos embedded on pages in this website'
                 }          
             },            
             purposes: ['advertisement'],
@@ -106,6 +104,7 @@ var klaroConfig = {
             required: false,
             optOut: false,
             onlyOnce: true,
+            contextualConsentOnly: true
         },    
         {
             name: 'googleAdsense',

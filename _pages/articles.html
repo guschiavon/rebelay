@@ -28,17 +28,7 @@ keywords:
     {% endfor %}
   </div>
 </div>
-<div class="container mx-auto text-center px-4 md:px-10 lg:px-16 mb-6">
-  <div class="creator-cta"
-    style='background-image: url({% picture direct "/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-16.jpg" %});'>
-    <h2 class="relative section-heading text-yellow-400">Calling all canyoning photographers and filmmakers</h2>
-    <p class="section-paragraph relative text-gray-50 mb-4">Re:belay is a channel for you to reach your audience. We
-      want to showcase your work. <br> Contact us to get featured on Re:belay.com</p>
-    <a href="/about#contact"
-      class="btn btn-solid--accent px-3 py-2 bg-yellow-500 hover:bg-yellow-400 font-display uppercase tracking-wider relative inline-block">Get
-      in touch</a>
-  </div>
-</div>
+{% include components/creator-cta.html %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script src="/js/slider.js" type="text/javascript" defer></script>
