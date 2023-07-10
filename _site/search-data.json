@@ -1,5 +1,18 @@
 [ 
     {
+      "title"         : "Diary of a First Descent - Part 1 - Re:belay Canyoning",
+      "displayTitle"  : "Diary of a First Descent - Part 1",
+      "url"           : "/2023/07/bedford-stream-pt-1",      
+      "postType"      : "article",
+      "date"          : "03 Jul 2023",
+      "category"      : "feature",
+      "author"        : "Gus Schiavon",
+      "image"         : "/assets/images/bedford/NZ-aspiring-bedford-00008.webp",
+      "description"   : "Deep into the New Zealand wilderness, a team attempts the first descent of Bedford Stream.",
+      "keywords"      : ""      
+
+    } ,  
+    {
       "title"         : "Canyoning in the Pacific North West of the USA - Re:belay Canyoning",
       "displayTitle"  : "The Wild Canyons of the Pacific Northwest",
       "url"           : "/2020/04/pnw",      
@@ -48,7 +61,7 @@
       "author"        : "Gus Schiavon",
       "image"         : "/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg",
       "description"   : "The story behind opening one of the longest canyons in Taiwan, the epic Malishan River",
-      "keywords"      : "canyoning pnw canyoning west coast usa canyoning seattle canyoneering in seattle canyoning in washington canyoning in oregon "      
+      "keywords"      : "canyoning taiwan canyoning in taiwan taiwan canyoning malishan canyon canyoneering in taiwan shower climbing in taiwan "      
 
     }   
 ]

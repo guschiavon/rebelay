@@ -199,7 +199,7 @@ Overcoming the crux pool was a huge task for the team. With an improvised bivoua
 
 With more rain the following morning, it was clear we had to finish the canyon before the water reached unmanageable levels, having already risen some 2 inches overnight. We came up with the idea of using a throw bag as the means to direct the larger rope bag (dubbed the "double floating anchor") over the edge of the drop. Our ingenuity was immediately rewarded, succeeding at the first attempt, thus scrapping the need for the sawanobori traverse. Akira then roped up and used the guideline to pull himself across, the force of the water trying to pin him against the wall. We watched from the top as he struggled with the current. "C'mon Akira!" we all screamed, the fate of the day, and the whole trip, in his hands. After five long minutes he finally stood up at the edge of the pool, arms raised, and we could celebrate. The crux had been overcome.
 
-![](/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg)
+![Time was ticking. Andrew manages the line as Akira attempts to reach the edge of the crux pool.](/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-5.jpg)
 
 ![Jasmine Li makes use of a guided rappel to narrowly escape the dangerous crux pool of Malishan.](/assets/images/taiwan-canyoning-expedition/canyoning-rebelay-001-malishan-7.jpg)
 

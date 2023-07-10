@@ -40,7 +40,7 @@ presets:
   article_feature:
     markup: picture
     formats: [avif, webp]
-    widths: [1000,800,650,400]
+    widths: [1500,800,650,400]
   gallery_image:
     markup: picture
     formats: [avif, webp]
@@ -48,7 +48,7 @@ presets:
   xlarge:
     markup: picture
     formats: [avif, webp]
-    widths: [600]
+    widths: [850, 600]
   large:
     markup: picture
     formats: [avif, webp]
