@@ -124,7 +124,7 @@ layout: default
       {% endfor %}
     </div>
 </div>
-<script type="module" async>
+<script type="module" >
   import { setActiveImg, setOrientation, setMarkdownImage } from '/js/modules/images.js';
 
   const article = document.querySelector('.article-content');  
@@ -134,18 +134,18 @@ layout: default
   });
 
   const eventHandler = (e,t,i,s,l,c) => {
-    t.addEventListener(e, () => {
+    t.addEventListener(e, () => {                 
       setOrientation(t,i);    
       setActiveImg(t,i,s,l,c);
     })  
   }
   window.addEventListener('DOMContentLoaded', () => {    
-    const galleryImgs = document.querySelectorAll('.gallery-thumb');    
+    const galleryImgs = document.querySelectorAll('.gallery-thumb');       
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
     const activeTitle = document.getElementById('activeTitle');    
     const activeSrcset = document.getElementById('activeSrcset');    
-    galleryImgs.forEach((img) => {
+    galleryImgs.forEach((img) => {    
       document.addEventListener('keydown', (e)=>{
         if (e.key === "Tab" && document.activeElement === img.parentElement) {
           setOrientation(img);

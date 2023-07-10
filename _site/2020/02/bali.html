@@ -494,7 +494,7 @@ crossorigin="anonymous" data-name="googleAdsense" type="text/plain" data-type="a
       
     </div>
 </div>
-<script type="module" async>
+<script type="module" >
   import { setActiveImg, setOrientation, setMarkdownImage } from '/js/modules/images.js';
 
   const article = document.querySelector('.article-content');  
@@ -504,18 +504,18 @@ crossorigin="anonymous" data-name="googleAdsense" type="text/plain" data-type="a
   });
 
   const eventHandler = (e,t,i,s,l,c) => {
-    t.addEventListener(e, () => {
+    t.addEventListener(e, () => {                 
       setOrientation(t,i);    
       setActiveImg(t,i,s,l,c);
     })  
   }
   window.addEventListener('DOMContentLoaded', () => {    
-    const galleryImgs = document.querySelectorAll('.gallery-thumb');    
+    const galleryImgs = document.querySelectorAll('.gallery-thumb');       
     const activeImg = document.getElementById('activeImg');
     const activeCaption = document.getElementById('activeCaption');    
     const activeTitle = document.getElementById('activeTitle');    
     const activeSrcset = document.getElementById('activeSrcset');    
-    galleryImgs.forEach((img) => {
+    galleryImgs.forEach((img) => {    
       document.addEventListener('keydown', (e)=>{
         if (e.key === "Tab" && document.activeElement === img.parentElement) {
           setOrientation(img);
@@ -533,7 +533,7 @@ crossorigin="anonymous" data-name="googleAdsense" type="text/plain" data-type="a
   </div>
   
   <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/139710487.js"></script>
+  <script type="text/javascript" id="hs-script-loader" async defer src="https://js-eu1.hs-scripts.com/139710487.js"></script>
   <!-- End of HubSpot Embed Code -->
   <footer class="bg-gray-300 py-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">

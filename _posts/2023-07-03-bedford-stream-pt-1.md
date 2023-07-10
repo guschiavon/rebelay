@@ -23,15 +23,15 @@ gallery:
   - image: '/assets/images/bedford/NZ-aspiring-bedford-00003.webp'
     title: Dawn of the day
     alt_text: Break of dawn during ther approach for Bedford Stream
-    caption: View of the Bedford Canyon from Sandy Flats, Dart Valley.
-  - image: '/assets/images/bedford/NZ-aspiring-bedford-00019.jpg'
-    title: Sense of Scale
-    alt_text: View of the Bedford Canyon from Sandy Flats, Dart Valley.
-    caption: View of the Bedford Canyon from Sandy Flats, Dart Valley.
-  - image: '/assets/images/bedford/NZ-aspiring-bedford-00019.jpg'
-    title: Sense of Scale
-    alt_text: View of the Bedford Canyon from Sandy Flats, Dart Valley.
-    caption: View of the Bedford Canyon from Sandy Flats, Dart Valley.
+    caption: "2h30 on the Dart Track plus another 5h up through the untracked forest: approaching Bedford wasn't a small task"
+  - image: '/assets/images/bedford/NZ-aspiring-bedford-00007.webp'
+    title: Into the Chasm
+    alt_text: looking down into Bedford Stream
+    caption: A cheeky look into the depths of Bedford Stream's middle section.
+  - image: '/assets/images/bedford/NZ-aspiring-bedford-00012.webp'
+    title: Pumping
+    alt_text: A strong water flow in the middle section of Bedford Stream
+    caption: Ben Buchy admires the scale and intensity of Bedford Stream.
 ---
 #### This story was originally published on April 15, 2015
 
