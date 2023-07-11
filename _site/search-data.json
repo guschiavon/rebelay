@@ -1,7 +1,20 @@
 [ 
     {
-      "title"         : "Diary of a First Descent - Part 1 - Re:belay Canyoning",
-      "displayTitle"  : "Diary of a First Descent - Part 1",
+      "title"         : "Diary of a First Descent - Part II - Re:belay Canyoning",
+      "displayTitle"  : "Diary of a First Descent - Part II",
+      "url"           : "/2023/07/bedford-stream-pt-2",      
+      "postType"      : "article",
+      "date"          : "04 Jul 2023",
+      "category"      : "feature",
+      "author"        : "Gus Schiavon",
+      "image"         : "/assets/images/bedford/NZ-aspiring-bedford-00029.webp",
+      "description"   : "A larger team tackles the lower section of Bedford Stream, but not without its perils.",
+      "keywords"      : ""      
+
+    } ,  
+    {
+      "title"         : "Diary of a First Descent - Part I - Re:belay Canyoning",
+      "displayTitle"  : "Diary of a First Descent - Part I",
       "url"           : "/2023/07/bedford-stream-pt-1",      
       "postType"      : "article",
       "date"          : "03 Jul 2023",

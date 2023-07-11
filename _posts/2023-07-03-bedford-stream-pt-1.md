@@ -1,8 +1,8 @@
 ---
 layout: post
 content_type: article
-title: Diary of a First Descent - Part 1 - Re:belay Canyoning
-display_title: Diary of a First Descent - Part 1
+title: Diary of a First Descent - Part I - Re:belay Canyoning
+display_title: Diary of a First Descent - Part I
 category: feature
 description: Deep into the New Zealand wilderness, a team attempts the first descent of Bedford Stream.
 _share_icons: true

@@ -15,9 +15,8 @@
     var formEl = document.getElementsByTagName("form")[0];    
     
     // Override the submit event
-    formEl.addEventListener("submit", function (e) {
+    formEl.addEventListener("submit", function (e) {      
       e.preventDefault();
-
       if (hcaptcha) {
         var recaptchaResponse = hcaptcha.getResponse();
         if (!recaptchaResponse) { // reCAPTCHA not clicked yet
@@ -30,7 +29,7 @@
 
       request.addEventListener("load", function () {
         if (request.status === 302) { // CloudCannon redirects on success
-          // It worked
+          
         }
       });
 
