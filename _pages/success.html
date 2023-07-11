@@ -4,3 +4,15 @@ title: Success - Rebelay Canyoning
 description: Your form has been submitted.
 sitemap: false
 ---
+<div class="container mx-auto text-center p-4">
+  <div class="py-24 flex flex-col items-center justify-center rounded-md mb-8">
+    <h1 class="section-heading text-yellow-400">Success</h1>
+    <p class="section-paragraph mb-6 text-gray-100">Thanks! We'll be in touch shortly.</p>
+    <a id="backBtn" href="" class="btn btn-solid--accent">Back to previous page</a>
+  </div>
+</div>
+<script>
+  const prev = document.referrer;
+  const btn = document.getElementById('backBtn');
+  btn.setAttribute('href',prev);
+</script>
