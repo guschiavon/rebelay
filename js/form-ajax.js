@@ -15,8 +15,7 @@
     var formEl = document.getElementsByTagName("form")[0];    
     
     // Override the submit event
-    formEl.addEventListener("submit", function (e) {
-      e.preventDefault();
+    formEl.addEventListener("submit", function (e) {      
 
       if (hcaptcha) {
         var recaptchaResponse = hcaptcha.getResponse();
