@@ -16,7 +16,7 @@
     
     // Override the submit event
     formEl.addEventListener("submit", function (e) {      
-
+      e.preventDefault();
       if (hcaptcha) {
         var recaptchaResponse = hcaptcha.getResponse();
         if (!recaptchaResponse) { // reCAPTCHA not clicked yet
@@ -29,13 +29,13 @@
 
       request.addEventListener("load", function () {
         if (request.status === 302) { // CloudCannon redirects on success
-          // It worked
+          alert("Thanks! We'll be in touch shortly");
         }
       });
 
       request.open(formEl.method, formEl.action);
       request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       request.send(getFormDataString(formEl));
-      alert("Thanks! We'll be in touch shortly");
+      
       formEl.reset()
     });
