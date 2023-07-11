@@ -29,13 +29,13 @@
 
       request.addEventListener("load", function () {
         if (request.status === 302) { // CloudCannon redirects on success
-          alert("Thanks! We'll be in touch shortly");
+          
         }
       });
 
       request.open(formEl.method, formEl.action);
       request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       request.send(getFormDataString(formEl));
-      
+      alert("Thanks! We'll be in touch shortly");
       formEl.reset()
     });
