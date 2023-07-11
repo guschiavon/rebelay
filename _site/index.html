@@ -49,7 +49,6 @@
   <script src="/js/klaro.js" data-config="klaroConfig" defer type="application/javascript"></script>  
   <link rel="stylesheet" href="/style/main.css">
 </head>
-
 <body class="min-h-screen flex flex-col overflow-x-hidden" style="scroll-behavior: smooth;">
   <div id="nav-bar" class="px-10 lg:px-28 py-4 w-full lg:w-3/5 lg:mx-auto bg-transparent">
   <a href="/" class="nav-bar--logo" aria-label="Homepage">
@@ -110,16 +109,16 @@
     
 <main class="atf-bg py-32 md:py-40 relative bg-center bg-cover bg-no-repeat" style='background-image: url(/generated/assets/images/bedford/NZ-aspiring-bedford-00008-1600-dd7cc6155.webp);'>
   <div class="relative container mx-auto px-4 md:px-16 py-4 md:py-24">
-    <a href="/2023/07/bedford-stream-pt-2">
+    <a href="/2023/07/bedford-stream-pt-1">
       <h1 class="atf-heading">
         Diary of a First Descent - Part 1
       </h1>
     </a>
-    <a href="/2023/07/bedford-stream-pt-2">
+    <a href="/2023/07/bedford-stream-pt-1">
       <p class="atf-paragraph">Deep into the New Zealand wilderness, a team attempts the first descent of Bedford Stream.</p>
     </a>
     <span class="block font-body tracking-wide text-sm font-light text-gray-200">By Gus Schiavon</span>
-    <a href="/2023/07/bedford-stream-pt-2"
+    <a href="/2023/07/bedford-stream-pt-1"
       class="group font-display inline-block editable py-2 text-lg md:text-2xl uppercase tracking-wider text-yellow-400 rounded-md" aria-label="read blog article titled Diary of a First Descent - Part 1">
       Read article<span class="opacity-0 group-hover:opacity-100 transition-opacity font-bold font-display text-4xl text-gray-100">:</span>
     </a>
@@ -133,32 +132,6 @@
   </div>
   <div id="slider" class="articles-wrapper slider" style="touch-action: auto;">
     
-    
-    <article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
-  <a href="/2023/07/bedford-stream-pt-1" class="blog-card--image" aria-label="image links to post titled Diary of a First Descent - Part 1 - Re:belay Canyoning">
-    <picture>
-  <source srcset="/generated/assets/images/bedford/NZ-aspiring-bedford-00008-500-f0ca6521a.avif 500w" type="image/avif">
-  <source srcset="/generated/assets/images/bedford/NZ-aspiring-bedford-00008-500-dd7cc6155.webp 500w" type="image/webp">
-  <img alt="" class="bg-image" loading="lazy" itemprop="image" src="/generated/assets/images/bedford/NZ-aspiring-bedford-00008-800-dd7cc6155.webp">
-</picture>
-
-  </a>
-  <div class="p-4 flex flex-col justify-between">
-    <div class="post-category">
-  <span>feature</span>
-  <span class="divide-dot">•</span>
-  <span>03 Jul 2023</span>
-</div>
-    <a href="/2023/07/bedford-stream-pt-1" class="py-2">
-      <h2 class="article-card--title" itemprop="headline">Diary of a First Descent - Part 1</h2>
-    </a>
-    <a href="/2023/07/bedford-stream-pt-1">
-      <p class="article-card--description" itemprop="description">Deep into the New Zealand wilderness, a team attempts the first descent of Bedford Stream.</p>
-    </a>
-    
-    <p class="article-card--author" itemprop="author">By Gus Schiavon</p>
-  </div>
-</article>
     
     <article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
   <a href="/2020/04/pnw" class="blog-card--image" aria-label="image links to post titled Canyoning in the Pacific North West of the USA - Re:belay Canyoning">
@@ -212,6 +185,32 @@
   </div>
 </article>
     
+    <article itemscope itemtype="https://schema.org/Article" class="blog-card transform hover:scale-95 transition-transform">
+  <a href="/2020/02/bali" class="blog-card--image" aria-label="image links to post titled The best of Bali Canyoning - Re:belay Canyoning">
+    <picture>
+  <source srcset="/generated/assets/images/bali/canyoning-rebelay-002-bali-012-500-730ab59db.avif 500w" type="image/avif">
+  <source srcset="/generated/assets/images/bali/canyoning-rebelay-002-bali-012-500-edf3b7ed6.webp 500w" type="image/webp">
+  <img alt="" class="bg-image" loading="lazy" itemprop="image" src="/generated/assets/images/bali/canyoning-rebelay-002-bali-012-800-c7f7e2e3b.jpg">
+</picture>
+
+  </a>
+  <div class="p-4 flex flex-col justify-between">
+    <div class="post-category">
+  <span>photostory</span>
+  <span class="divide-dot">•</span>
+  <span>27 Feb 2020</span>
+</div>
+    <a href="/2020/02/bali" class="py-2">
+      <h2 class="article-card--title" itemprop="headline">A visual journey through the Tropical Descents in Bali</h2>
+    </a>
+    <a href="/2020/02/bali">
+      <p class="article-card--description" itemprop="description">Discover the beautiful and wild canyons of the Island of Gods by the eyes of Supersmarindo</p>
+    </a>
+    
+    <p class="article-card--author" itemprop="author">By Supersmarindo</p>
+  </div>
+</article>
+    
   </div>
   
   
@@ -223,10 +222,10 @@
       <p class="section-paragraph">Sign up to our newsletter and get notified about the latest canyoning articles</p>
     </div>
     <div class="newsletter-form flex-1">
-      <form id="newsletterForm" action="" method="post" class="flex flex-col gap-2">
+      <form id="newsletterForm" action="/success" method="POST" class="flex flex-col gap-2">
         <input id="form-input--email" type="email" name="email" placeholder="Your Email" class="newsletter-input--email">        
-        <input id="submitBtn" type="submit" value="Sign Up" class="form-btn">
         <div class="h-captcha" data-sitekey="c7e8a8df-03b6-403e-af53-c4f9e4d351eb" data-size="default"></div>
+        <input id="submitBtn" type="submit" value="Sign Up" class="form-btn">
       </form>
     </div>
   </div>
@@ -268,7 +267,7 @@
 </div>
 
 <script src="/js/slider.js" defer></script>
-<script src="/js/form-ajax.js" type="text/javascript"></script>
+<!-- <script src="/js/form-ajax.js" type="text/javascript"></script> -->
 <script>
   const form = document.getElementById('newsletterForm');
   const formInput = document.getElementById('form-input--email');
@@ -284,10 +283,8 @@
 </script>
 <script src="/js/components/essentials-collection.js" type="text/javascript" defer></script>
   </div>
-  
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="https://js-eu1.hs-scripts.com/139710487.js"></script>
-  <!-- End of HubSpot Embed Code -->
+    
+  <script type="text/javascript" id="hs-script-loader" defer src="https://js-eu1.hs-scripts.com/139710487.js"></script>  
   <footer class="bg-gray-300 py-6">
   <div class="container mx-auto px-4 md:px-10 lg:px-16">
     <div class="flex flex-col md:flex-row items-center justify-between">
