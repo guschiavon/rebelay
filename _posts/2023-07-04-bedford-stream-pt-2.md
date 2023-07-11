@@ -44,6 +44,10 @@ gallery:
     title: Cracking views
     alt_text: A canyoneer rappelling on double rope framed against a rock feature
     caption: Another perfect frame for a photo during the last couple of drops of Bedford canyon.
+keywords:
+  - first descents nz
+  - international canyoning expedition
+  - gloomy gorge nz    
 ---
 #### This story was originally published on April 15, 2015.  Click here for <a href="/2023/07/bedford-stream-pt-1.md">Diary of a First Descent - Part I</a>
 

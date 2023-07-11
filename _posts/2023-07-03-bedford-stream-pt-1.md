@@ -32,6 +32,12 @@ gallery:
     title: Pumping
     alt_text: A strong water flow in the middle section of Bedford Stream
     caption: Ben Buchy admires the scale and intensity of Bedford Stream.
+keywords:
+  - first descent bedford stream
+  - bedford canyon nz
+  - bedford stream nz
+  - canyoning in nz
+  - canyoning expedition in nz    
 ---
 #### This story was originally published on April 15, 2015
 
