@@ -15,6 +15,14 @@
   background: rgb(25, 25, 25);
   background: linear-gradient(318deg, rgba(25, 25, 25, 1) 0%, rgba(139, 139, 139, 1) 50%, rgba(69, 69, 69, 1) 100%);
 }
+.atf-bg {
+  position: relative;
+  &::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(50, 50, 50, 0.85) 0%, rgba(50,50,50,0) 60%);
+    @apply h-full w-full absolute bottom-0 left-0;
+  }
+}
 .atf-heading {
   @apply text-3xl md:text-4xl lg:text-6xl font-display font-bold mb-6 text-gray-50 relative tracking-wide hover:text-yellow-400 transition-colors;
 }
