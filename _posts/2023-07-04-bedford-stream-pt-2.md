@@ -31,11 +31,7 @@ gallery:
   - image: '/assets/images/bedford/NZ-aspiring-bedford-00035.webp'
     title: Lower yet Strong
     alt_text: A strong water flow in the middle section of Bedford Stream
-    caption: Mark crosses the flow on a difficult move to overcome the atrium waterfall
-  - image: '/assets/images/bedford/NZ-aspiring-bedford-00035.webp'
-    title: Lower yet Strong
-    alt_text: A strong water flow in the middle section of Bedford Stream
-    caption: Mark crosses the flow on a difficult move to overcome the atrium waterfall
+    caption: Mark crosses the flow on a difficult move to overcome the atrium waterfall  
   - image: '/assets/images/bedford/NZ-aspiring-bedford-00038.webp'
     title: Sights to behold
     alt_text: A waterfall seen from below
@@ -49,7 +45,7 @@ keywords:
   - international canyoning expedition
   - gloomy gorge nz    
 ---
-#### This story was originally published on April 15, 2015.  Click here for <a href="/2023/07/bedford-stream-pt-1.md">Diary of a First Descent - Part I</a>
+#### This story was originally published on April 15, 2015.  Click here for <a href="/2023/07/bedford-stream-pt-1" class="text-yellow-500 underline">Diary of a First Descent - Part I</a>
 
 Our excitement with the outcome of the first exploration day had Mark and David salivating. Both had been working and unable to join us on the occasion, but the two were playing their cards for a day-off together.
 

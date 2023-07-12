@@ -126,4 +126,5 @@ The pool is crossed with a direct jump-and-swim action and he’s out. With a bi
 
 A total of 4h30min of descent with the intensity and technicality we were expecting. We are pleased with the outcome of the day and get ready to climb down through the forest. We reach the Paradise parking area just before sunset and congratulate each other for our efforts. Finally, Bedford was a reality. But as we also knew, this was only the beginning of our adventure.
 <br>
-#### This article continues on Part II
+
+#### This article continues on <a href="/2023/07/bedford-stream-pt-2" class="text-yellow-500 underline">Diary of a First Descent - Part II</a>

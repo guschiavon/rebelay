@@ -10,7 +10,7 @@ var klaroConfig = {
     storageName: 'rebelay',
     noAutoLoad: false,
     styling: {
-        theme: ['bottom', 'wide'],
+        theme: ['bottom', 'narrow'],
     },
     htmlTexts: false,
     // cookieDomain: '.example.com',
