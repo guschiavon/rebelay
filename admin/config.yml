@@ -18,4 +18,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Feature Image", name: "feature_image", widget: "image", default: "/assets/images/placeholder.jpg"}
       - {label: "Author", name: "author", widget: "select", options: ['gus','jake','imin']}
-      - {label: "Gallery", name: "gallery", widget: "list", fields: [{label: 'Gallery Image', name: 'image', widget: image},{label: 'Alt Text', name: 'alt_text', widget: 'string'}, {label: 'Caption', name: 'caption', widget: 'rich-text'}] }      
+      - {label: "Gallery", name: "gallery", widget: "list", fields: [{label: 'Gallery Image', name: 'image', widget: image},{label: 'Alt Text', name: 'alt_text', widget: 'string'}, {label: 'Caption', name: 'caption', widget: 'text'}]}
