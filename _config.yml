@@ -1,6 +1,9 @@
 url: 'https://rebelay.com'
 
-netlifycms: true
+identity:
+  enabled: true
+  registration:
+    inviteOnly: true
 
 sass:
   dir: _sass
