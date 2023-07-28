@@ -51,7 +51,7 @@ canyon_beta:
   map_url: ''
 page_blocks:
 ---
-\### This story is the last of the 3-part series of Bedford Canyon. You can read [part I here](/2023/07/bedford-stream-pt-1)
+### This story is the last of the 3-part series of Bedford Canyon. You can read [part I here](/2023/07/bedford-stream-pt-1)
 
 Autumn is fast approaching; the weather showing signs of change day after day. Cold fronts from the Southern Ocean bring low temperatures and rain. We’re running out of time.
 
