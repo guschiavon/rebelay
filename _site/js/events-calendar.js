@@ -8,7 +8,7 @@ const eventsEl = document.getElementById('events');
 
   fetchEventsFromGoogleCalendars(calendarIds, apiKey)
     .then((events) => {    
-      console.log(events);
+      
       events.sort(function(a,b) {
         let aStart = new Date(a.start.dateTime).valueOf();
         let bStart = new Date(b.start.dateTime).valueOf();
@@ -16,7 +16,7 @@ const eventsEl = document.getElementById('events');
       });
       eventsEl.innerHTML = '';
       events.forEach((event) => {        
-        let eventStart = new Date(event.start.dateTime).valueOf();        
+        let eventStart = new Date(event.end.dateTime).valueOf();
         if (eventStart > now) {          
           createEventInstance(event, eventsEl);
         }
