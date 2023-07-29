@@ -57,6 +57,8 @@ Autumn is fast approaching; the weather showing signs of change day after day. C
 
 Due to increment weather and overlapping work schedules, the team is forced to take a 2-week break from the exploration; some of us seize the opportunity to experience other canyons in the Haast area (subject of previous posts). Nonetheless, we continue to plan the 3rd and last day of our Bedford attempt.
 
+## Change of plans
+
 I get a message from Ben: “We’re leaving on Monday 11pm, David, you and I. The three of us will do the top section and finish the canyon. Be prepared for a long day of adventure!” it read. I reply with an OK but somehow, I wasn’t feeling it. Only the 3 of us taking on the hardest part of the canyon, hauling all the gear 5 hours uphill, and making the final push through the whole day. I had some doubts on our capability to pull it off. Despite, I set my alarm for 10.30pm and try to get some sleep before the departure. Around 9.30 I get a message which wakes me up: David wasn’t feeling well, and we would have to postpone our plans. I must admit I felt good about it.
 
 We rearrange the schedules and manage to secure Mark’s presence for the next planned day. We were set, all feeling confident and rested. Thursday, 11pm. Bedford, here we come.
@@ -79,6 +81,8 @@ Breakfast ensues and soon we’re off, heading towards the entrance of the canyo
 
 ![](/uploads/nz-aspiring-bedford-03-00020.jpg){: width="3008" height="2008"}
 
+## All systems go
+
 A tree is used for the first drop. I climb around to scout the pool and notice 2 powerful water movements while Ben leads the way. Using a pendulum motion he gains momentum to push and reach the better part of the flow. Finding an edge, he signals for the rest of us. A few minutes later, we’re in.
 
 The view from the top of the following waterfall – a short 6m rappel – leaves room for imagination, the steep and curved walls of Bedford giving us no indication of what’s to come. Mark finishes pulling the rope from the previous drop. From here onwards, we’re totally committed.
@@ -86,6 +90,8 @@ The view from the top of the following waterfall – a short 6m rappel – leave
 ![](/uploads/nz-aspiring-bedford-03-00019.jpg){: width="2008" height="3008"}
 
 We set fixed systems allowing a team of 2 to descend simultaneously. It would increase the speed and efficiency during bolting. David and Ben head down first; the latter intentionally swimming towards the river-right whitewater to test its intensity. Mark and I lose sight of them both as they progress into the dark corridor. With the blow of a whistle, I rope up and go down; Mark in charge of the break-down.
+
+## Birth of an epic
 
 “Gus, there is a siphon!” Ben yells, as I see him taking up slack and heading down as lead man once again. I’m amped-up. While trying to get into position for a photo, I hear Mark’s call for support: “Grab the bag and help me up, I twisted my ankle”. I ask him to repeat his statement; he reaffirms what was just said. My initial reaction is silent. Two rappels down, I reflect on our current position and the requirements of the day, starting with overcoming the siphon on the next drop.
 
@@ -109,6 +115,8 @@ The open room provides enough space on river-right to shelter from increment wea
 
 ![](/uploads/nz-aspiring-bedford-03-00007.jpg){: width="2878" height="1921"}
 
+## Rescue ensues
+
 David is waiting for us at the top of the next drop. The river-right belay is tricky to be reached: we must use the current rappel rope to access it. An S-shaped waterfall presents itself, the water powerfully pushing left, right and down. We reflect on Mark’s ability to overcome it. It is decided we’ll set a guided rappel, to which Ben abides and sets up from below. David joins him and continues to assess our upcoming challenges. I assist Mark on reaching the belay and he’s soon on his way. A third of the way down and the weight of the bag affects his balance, causing him to dangerously flip upside down close to the water. He quickly releases his bag and recovers his position; I am distracted by the episode and end up losing hold of the previous rope, not yet recovered from the last belay: I watch as both tails disappear in the pool behind me. Having used the same rope to move around, I am a bit stuck at the belay, rope and bags far away. I use my Pyrenean cow’s tail to extend my reach; I barely make it back to a ledge where the bags are laid. I can see the tails of the 30m rope on the boil; I jump in and manage to grab a hold of them. Rope down and coiled up, I send the bags down and move forward.
 
 ![](/uploads/nz-aspiring-bedford-03-00006.jpg){: width="2008" height="3008"}
@@ -118,6 +126,8 @@ A couple of drops later we notice the brightness of the day once again began to 
 ![](/uploads/nz-aspiring-bedford-03-00004.jpg){: width="3008" height="1692"}
 
 A quick climb later and we’re out. We sit down, recovering from the 6 intense hours spent inside. Mark turns on his locator beacon; we agree the area is open enough for a helicopter rescue. At just over 900m, we acknowledge that we would have another 2 hours minimum progression through the forest; with Mark’s injury, this estimate could double. The clock was ticking and our odds decreasing. With no sign of SAR, we decide it’s time for action.
+
+## Done, but not finished
 
 The plan is laid out: Ben was to go down, alone, and reach the car park as soon as possible. From there, a 15-minute drive to ensure cell phone coverage. Meanwhile, David, Mark and I were to make a push towards the valley below, carrying most of the gear. We decide the best option is to rappel as much as possible, losing altitude while preventing Mark from walking. The terrain is not ideal: numerous holes concealed by moss dubbed as traps for an already-crippled team. I put my camera away; we make our way down slowly and carefully.
 
