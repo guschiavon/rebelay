@@ -55,7 +55,7 @@ page_blocks:
 
 Autumn is fast approaching; the weather showing signs of change day after day. Cold fronts from the Southern Ocean bring low temperatures and rain. We’re running out of time.
 
-Due to increment weather and overlapping work schedules, the team is forced to take a 2-week break from the exploration; some of us seize the opportunity to experience other canyons in the Haast area (subject of previous posts). Nonetheless, we continue to plan the 3rd and last day of our Bedford attempt.
+Due to inclement weather and overlapping work schedules, the team is forced to take a 2-week break from the exploration; some of us seize the opportunity to experience other canyons in the Haast area (subject of previous posts). Nonetheless, we continue to plan the 3rd and last day of our Bedford attempt.
 
 ## Change of plans
 
