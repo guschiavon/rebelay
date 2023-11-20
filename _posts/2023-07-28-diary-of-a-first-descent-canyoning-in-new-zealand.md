@@ -109,7 +109,7 @@ We set up a guided rappel for Mark on a small S-shaped drop. The team moves forw
 
 ![](/uploads/nz-aspiring-bedford-03-00011.jpg){: width="1886" height="2641"}
 
-The open room provides enough space on river-right to shelter from increment weather if worse comes to worse. It also leads into another deep section, the dark corridor providing no clues of the upcoming obstacles. We use a hand line to traverse around the wall and reach the belay. A 10m overhang gets us in; we reach the edge and as Ben and David continue the progression. I look from above, the ambiance is powerful. The rock adorned with quartz lines, stripped from vegetation, damp from the ever-present spray, glowing with the faint light that reaches down. We’re in the guts of the Bedford Canyon.
+The open room provides enough space on river-right to shelter from inclement weather if worse comes to worse. It also leads into another deep section, the dark corridor providing no clues of the upcoming obstacles. We use a hand line to traverse around the wall and reach the belay. A 10m overhang gets us in; we reach the edge and as Ben and David continue the progression. I look from above, the ambiance is powerful. The rock adorned with quartz lines, stripped from vegetation, damp from the ever-present spray, glowing with the faint light that reaches down. We’re in the guts of the Bedford Canyon.
 
 ![](/uploads/nz-aspiring-bedford-03-00017.jpg){: width="3008" height="1692"}
 
